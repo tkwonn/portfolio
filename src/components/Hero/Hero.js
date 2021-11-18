@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponents';
 import Button from '../../styles/GlobalComponents/Button';
@@ -14,7 +15,12 @@ const Hero = (props) => (
       <SectionText>
         Welcome to my personal portfolio.
       </SectionText>
-      <Button onClick={() => window.location = ''}>Email</Button>
+      <Button onClick={() => window.open('mailto: kwontaesok1997@gmail.com')}>Email</Button>
+      <Button>
+        <a href='/images/tk.resume.pdf' download='Taesok Kwon Resume.pdf' style={{color: 'white'}}>
+          Download resume
+        </a>
+      </Button>
     </LeftSection>
   </Section>
 );
