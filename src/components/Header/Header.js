@@ -21,20 +21,18 @@ const Header = () =>  (
           <NavLink>Projects</NavLink>
         </Link>
       </li>
-      <li>
+      {/* <li>
         <Link href='#acomplishments'>
           <NavLink>Acomplishments</NavLink>
-        </Link>
-      </li>
-      {/* <li>
-        <Link href='#projects'>
-          <NavLink>About</NavLink>
         </Link>
       </li> */}
     </Div2>
     <Div3>
       <SocialIcons href="https://github.com/tkwonn">
         <AiFillGithub size="3rem" />
+      </SocialIcons>
+      <SocialIcons href="https://www.linkedin.com/in/taesok-kwon-a61796226/">
+        <AiFillLinkedin size="3rem" />
       </SocialIcons>
     </Div3>
   </Container>
