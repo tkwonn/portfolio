@@ -41,3 +41,5 @@ export default class MyDocument extends Document {
     );
   }
 }
+
+// A file that allows to configure the final output HTML file
