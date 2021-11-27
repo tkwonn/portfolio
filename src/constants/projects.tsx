@@ -1,7 +1,8 @@
 export const projects = [
   {
     title: 'Computer Builder',
-    description: "In this app, users would select major parts of the computer to build their own computer. It uses API to retrieve data in an asynchronous process. Depending on each component chosen by the user, it will calculate the specs of the computer and compare whether it is better for work or gaming. Through this project, I learned how to handle the use of JSON and Promise Object, how to use lambda function and APIs for asynchrounous data fetching. I also used useContext and useReducer as state management methods and made sure to define the type of action as a constant to avoid unnecessary bugs.",
+    description: "In this app, users would select major parts of the computer to build their own computer. It uses API to retrieve data in an asynchronous process. Depending on each component chosen by the user, it will calculate the specs of the computer and compare whether it is better for work or gaming. Through this project, I learned how to handle the use of JSON and Promise Object, how to use lambda function and APIs for asynchrounous data fetching.",
+    points: "",
       image: '/images/computer.jpg',
       tags: ['React', 'TailwindCSS'],
     source: 'https://github.com/tkwonn/computer-builder',
@@ -9,8 +10,9 @@ export const projects = [
     id: 0,
   },
   {
-    title: '4 in a row',
-    description: "This project is a four in row game (player vs computer) that has been written in Vue.js. We designed it to dynamically generate the board size and the number of players, and used Vuex as a state management method. For a win algorithm, we were able to reduce the number of computations by treating the last checker as a focal point. This was also my first opportunity to develop in a team and to use Github with multiple people.",
+    title: 'Connect 4',
+    description: "This project is a four in row game (player vs computer) that has been written in Vue.js. This was also my first opportunity to develop in a team and to use Github with multiple people.　We designed it to dynamically generate the board size and the number of players, and used Vuex as a state management method. For a win algorithm, we were able to reduce the number of computations by treating the last checker as a focal point.",
+    points: "",
     image: '/images/connect4.jpg',
     tags: ['Vue'],
     source: 'https://github.com/Recursion-TeamE/Connect4',
@@ -19,7 +21,8 @@ export const projects = [
   },
   {
     title: 'Clicker Empire Game',
-    description: "This is a game where you click on burgers to earn money and buy items to become rich. I used DOM operations to switch pages and added the ability to save and delete data in local storage.",
+    description: "This is an app where the user can earn money by clicking on hamburgers, and use the money to upgrade, invest, or buy real estate. This was a good learning opportunity for me to get used to the DOM operations.",
+    points: "",
       image: '/images/clicker.jpg',
       tags: ['JavaScript', 'Bootstrap'],
     source: 'https://github.com/tkwonn/Clicker_Empire_Game',
@@ -29,6 +32,7 @@ export const projects = [
   {
     title: 'Task Management App',
     description: "This app allows users to manage projects and tasks visually using the board. One board represents one project and contains one or more lists. User can drag-n-drop to change the order of lists, the order of tasks inside the list, and move task from one list to another as well. I learned how to implement simple CRUD functionality by creating this app.",
+    points: "",
     image: '/images/task.png',
     tags: ['Vue'],
     source: 'https://github.com/tkwonn/task-management-app',
@@ -38,6 +42,7 @@ export const projects = [
   {
     title: 'Vending Machine',
     description: "This app uses a slider to implement a function that allows users to purchase products by selecting a number, just like a vending machine. In this project, I learned what a DOM is and how to manipulate it in JavaScript, and also learned how to use event listeners to process data through actions in the interface.",
+    points: "",
     image: '/images/vending.jpg',
     tags: ['JavaScript', 'Bootstrap'],
     source: 'https://github.com/tkwonn/Vending_Machine',
@@ -47,6 +52,7 @@ export const projects = [
   {
     title: 'Battery Finder Program',
     description: "This app allows users to enter the brand, model, and power consumption of the camera. Once the user has made the selections, it will automatically present a list of the most suitable batteries. In this project, I learned how to manipulate a DOM and how to change the elements to be displayed based on user inputs.",
+    points: "",
     image: '/images/battery.jpg',
     tags: ['JavaScript', 'Bootstrap'],
     source: 'https://github.com/tkwonn/Battery_Finder_Program',
