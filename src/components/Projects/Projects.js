@@ -3,13 +3,15 @@ import React from 'react';
 import { BlogCard, CardInfo, ExternalLinks, GridContainer, ProjectTitle, Tag, TagList, TitleContent, UtilityList, Img } from './ProjectsStyles';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { projects } from '../../constants/projects';
+import { AiOutlineTags } from 'react-icons/ai';
+
 
 const Projects = () => (
   <Section nopadding id="projects">
     <SectionDivider />
     <SectionTitle main>Projects</SectionTitle>
     <GridContainer>
-      {projects.map(({ id, image, title, description, tags, visit, source }) => (
+      {projects.map(({ id, image, title, description, points, tags, visit, source }) => (
         <BlogCard key={id.toString()}>
           <Img src={image} />
           <TitleContent>
@@ -19,7 +21,7 @@ const Projects = () => (
           <div>
             <TagList>
               {tags.map((tag, index) => (
-                <Tag key={index.toString()}>{tag}</Tag>
+                <Tag key={index.toString()}><AiOutlineTags /> {tag}</Tag>
               ))}
             </TagList>
           </div>
