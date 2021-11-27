@@ -11,12 +11,9 @@ const Hero = (props) => (
         Taesok Kwon's <br />
         Personal Portfolio
       </SectionTitle>
-      <SectionText>
-        Welcome to my personal portfolio.
-      </SectionText>
       <Button onClick={() => window.open('mailto: kwontaesok1997@gmail.com')}>Email</Button>
       <Button>
-        <a href='/images/tk.resume.pdf' download='Taesok Kwon Resume.pdf' style={{color: 'white'}}>
+        <a href='/images/tk.resume-ja.pdf' download='Taesok Kwon Resume.pdf' style={{color: 'white'}}>
           Download resume
         </a>
       </Button>
