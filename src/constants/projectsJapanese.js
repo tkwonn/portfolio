@@ -2,7 +2,7 @@ export const projects = [
   {
     title: 'Computer Builder',
     description: "CPU、GPUなどコンピュータの主要な部品を選択しPCを作ります。選択した部品のベンチマークをもとにゲーミング用と作業用のスコアを算出し、スペックを比較するアプリです。",
-    points: "useContextとuseReducerを使用した状態管理、actionのタイプを定数にし別のファイルで管理しました。容量（ストレージ）の選択肢に関しては大きい順にソートしました。",
+    points: "useContextとuseReducerを使用した状態管理、actionのタイプを定数にし別のファイルで管理しました。",
       image: '/images/computer.jpg',
       tags: ['React', 'TailwindCSS'],
     source: 'https://github.com/tkwonn/computer-builder',
@@ -52,7 +52,7 @@ export const projects = [
   {
     title: 'Battery Finder Program',
     description: "カメラのブランド、モデル、アクセサリの消費電力を入力すると、自動で最適なバッテリーの一覧を確認することができるアプリです。",
-    points: "MVCモデルに沿った設計を意識しました。",
+    points: "ユーザインターフェースと内部のデータを分けるMVCモデルに沿った設計を意識しました。",
     image: '/images/battery.jpg',
     tags: ['JavaScript', 'Bootstrap'],
     source: 'https://github.com/tkwonn/Battery_Finder_Program',
