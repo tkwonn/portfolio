@@ -10,16 +10,6 @@ export const projects = [
     id: 0,
   },
   {
-    title: 'Connect 4',
-    description: "This project is a four in row game (player vs computer) that has been written in Vue.js. This was also my first opportunity to develop in a team and to use Github with multiple people.　We designed it to dynamically generate the board size and the number of players, and used Vuex as a state management method. For a win algorithm, we were able to reduce the number of computations by treating the last checker as a focal point.",
-    points: "",
-    image: '/images/connect4.jpg',
-    tags: ['Vue'],
-    source: 'https://github.com/Recursion-TeamE/Connect4',
-    visit: 'https://recursion-teame.github.io/Connect4/',
-    id: 1,
-  },
-  {
     title: 'Clicker Empire Game',
     description: "This is an app where the user can earn money by clicking on hamburgers, and use the money to upgrade, invest, or buy real estate. This was a good learning opportunity for me to get used to the DOM operations.",
     points: "",

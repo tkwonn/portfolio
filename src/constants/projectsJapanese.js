@@ -10,16 +10,6 @@ export const projects = [
     id: 0,
   },
   {
-    title: 'Connect 4',
-    description: "横5×縦5マスのボード上に、2人のプレイヤーが交代でボールを積み上げて行き、相手よりも先に４つのボールを並べた方が勝ちとなるゲームです。４人で構成されたチームで開発したアプリです。",
-    points: "ボードのマスを4×4 ~ 8×8まで、プレイヤーの人数を2 ~ 4人までユーザの入力によって、動的に生成されるように作成しました。winアルゴリズムでは、最後のチェッカーを焦点として扱うことで、計算回数を減らすことができました。",
-    image: '/images/connect4.jpg',
-    tags: ['Vue'],
-    source: 'https://github.com/Recursion-TeamE/Connect4',
-    visit: 'https://recursion-teame.github.io/Connect4/',
-    id: 1,
-  },
-  {
     title: 'Clicker Empire Game',
     description: "ハンバーガーをクリックしてお金を稼ぎ、稼いだお金で株や不動産などを購入して億万長者へと成長していくシミュレーションゲームです。",
     points: "ゲームの設定が特有なため、遊び方をモーダルウィンドウで表示するようにしました。また、ゲームのデータをローカルストレージに保存したり、データをリセットできる機能をつけました。",
