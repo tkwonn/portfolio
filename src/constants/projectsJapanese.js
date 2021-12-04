@@ -31,7 +31,7 @@ export const projects = [
   },
   {
     title: 'Vending Machine',
-    description: "ボタンの番号をクリックすると商品の画像が詳細（コメント）とともにスライダーで表示されるアプリです。",
+    description: "ボタンの番号をクリックすると商品の画像が詳細とともにスライダーで表示されるアプリです。",
     points: "通常の自動販売機にはない機能として商品の詳細をコメントで表示するようにしました。",
     image: '/images/vending.jpg',
     tags: ['JavaScript', 'Bootstrap'],
