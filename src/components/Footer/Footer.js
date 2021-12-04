@@ -22,9 +22,9 @@ const Footer = () => {
           <SocialIcons href="https://github.com/tkwonn">
             <AiFillGithub size="3rem" />
           </SocialIcons>
-          <SocialIcons href="https://www.linkedin.com/in/taesok-kwon-a61796226/">
+          {/* <SocialIcons href="https://www.linkedin.com/in/taesok-kwon-a61796226/">
             <AiFillLinkedin size="3rem" />
-          </SocialIcons>
+          </SocialIcons> */}
         </SocialContainer>
       </SocialIconsContainer>
     </FooterWrapper>
