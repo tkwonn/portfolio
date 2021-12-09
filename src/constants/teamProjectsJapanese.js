@@ -2,11 +2,11 @@ export const teamProjects = [
   {
     title: 'Connect 4',
     description: "チーム開発で習ったノウハウを落とし込むべく、今度はメンターなしで同じアプリを改善・カスタマイズし、実装しました。",
-    points: "新たにCPU対戦モードの実装やレイアウトの修正、勝利後のアニメーションを加えどのようにボールが揃ったのか可視化できるようにしました。CPUのロジックはeasyレベルとhardレベルを設定し、easyではCPUがランダムにボールの配置を選択するようにしました。hardは現在取り組み中です。",
+    points: "新たにCPU対戦モードの実装やレイアウトの修正、勝利後のアニメーションを加えどのようにボールが揃ったのか可視化できるようにしました。CPUのロジックはeasyレベルとhardレベルを設定し、easyではCPUがランダムにボールの配置を選択するようにしました。hardはモンテカルロ木探索アルゴリズムを使用しました。",
     image: '/images/connect4-2.png',
     tags: ['Next.js', 'Material UI'],
     source: 'https://github.com/TeamE-React/connect-4',
-    visit: 'https://recursion-teame.github.io/Connect4/',
+    visit: 'https://teame-connect4.vercel.app/',
     id: 1,
   },
   {
