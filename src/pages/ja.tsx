@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 // import Acomplishments from '../components/Acomplishments/Acomplishments';
-import Hero from '../components/Hero/Hero';
-import Projects from '../components/Projects/Projects';
+import HeroJapanese from '../components/Hero/HeroJapanese';
+import ProjectJapanese from '../components/Projects/ProjectJapanese';
 import { Layout } from '../layout/Layout';
 import { Section } from '../styles/GlobalComponents';
 
@@ -9,9 +9,9 @@ const Home: FC = () => {
   return (
     <Layout>
       <Section grid>
-          <Hero />
+        <HeroJapanese />
       </Section>
-      <Projects />
+      <ProjectJapanese />
       {/* <Acomplishments /> */}
     </Layout>
   );

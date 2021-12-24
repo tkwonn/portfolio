@@ -1,24 +1,26 @@
-import React, {useContext, useEffect} from 'react';
+import React, { useContext } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { DiCodeigniter } from 'react-icons/di';
-import { FormControlLabel, Switch } from '@material-ui/core';
 
 import { Container, Span, Div1, Div2, Div3, NavLink, SocialIcons } from './HeaderStyles';
-
 import AppContext from '../../context/AppContext';
+
+import ToggleButton from '@material-ui/lab/ToggleButton';
+import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 
 const Header = () =>  {
   const { language, setLanguage } = useContext(AppContext);
-  const toggleLanguage = (e) => {
-    e.preventDefault();
-    setLanguage(language === "English" ? "Japanese" : "English");
-  }
+  const router = useRouter();
 
-  useEffect(() => {
-    console.log(language);
-  }, [language]);
+  const handleChange = (event, newLanguage) => {
+    event.preventDefault();
+    setLanguage(newLanguage);
+    if(language === "english") router.push('/');
+    else router.push('/ja');
+  };
 
   return(
     <Container>
@@ -42,7 +44,14 @@ const Header = () =>  {
         </li> */}
       </Div2>
       <Div3>
-        <FormControlLabel control={<Switch color="primary" onChange={toggleLanguage}/>} label="English / Japanese" />
+        <ToggleButtonGroup
+          value={language}
+          exclusive
+          onChange={handleChange}
+        >
+          <ToggleButton value="english" style={{ color: "white", borderColor: "white"}}>ENG</ToggleButton>
+          <ToggleButton value="japanese" style={{ color: "white", borderColor: "white"}}>JPN</ToggleButton>
+        </ToggleButtonGroup>
         <SocialIcons href="https://github.com/tkwonn">
           <AiFillGithub size="3rem" />
         </SocialIcons>
