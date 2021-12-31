@@ -62,7 +62,7 @@ export const Intro = styled.div`
 export const CardInfo = styled.p`
   width: 100%;
   padding: 0 35px;
-  margin-top: 15px;
+  margin: 15px 0px;
   color: #e4e6e7;
   font-style: 2rem;
   line-height: 24px;
@@ -98,9 +98,14 @@ transition: 0.5s;
 export const TagList = styled.ul`
 display: flex;
 justify-content: space-around;
-padding: 2rem;
+padding: 1.2rem;
 `
 export const Tag = styled.li`
 color: #ff8a71;
+font-size: 1.5rem;
+`
+
+export const HashTag = styled.li`
+color: #bf7fd4;
 font-size: 1.5rem;
 `
