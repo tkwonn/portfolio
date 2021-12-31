@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BlogCard, CardInfo, ExternalLinks, GridContainer, ProjectTitle, Tag, TagList, TitleContent, UtilityList, Img } from './ProjectsStyles';
+import { BlogCard, CardInfo, ExternalLinks, GridContainer, ProjectTitle, Tag, HashTag, TagList, TitleContent, UtilityList, Img } from './ProjectsStyles';
 import { Section, SectionDivider, SectionTitle, SectionText } from '../../styles/GlobalComponents';
 import { teamProjects } from '../../constants/teamProjectsJapanese';
 import { projects } from '../../constants/projectsJapanese';
@@ -12,7 +12,7 @@ const Projects = () => (
     <SectionTitle main>Projects</SectionTitle>
     <SectionText style={{ fontSize: "1.5rem", color: "#f3905bd5"}}>** チーム開発で作成したアプリはオレンジ色でハイライトしております **</SectionText>
     <GridContainer>
-    {teamProjects.map(({ id, image, title, description, points, tags, visit, source }) => (
+    {teamProjects.map(({ id, image, title, description, points, tags, hashtags, visit, source }) => (
         <BlogCard style={{ border: "2px solid #f49867", boxShadow: "3px 3px 10px #f3905bd5" }} key={id.toString()}>
           <Img src={image} />
           <TitleContent>
@@ -24,6 +24,11 @@ const Projects = () => (
             <TagList>
               {tags.map((tag, index) => (
                 <Tag key={index.toString()}><AiOutlineTags /> {tag}</Tag>
+              ))}
+            </TagList>
+            <TagList>
+              {hashtags.map((ele, index) => (
+                <HashTag key={index.toString()}># {ele}</HashTag>
               ))}
             </TagList>
           </div>
