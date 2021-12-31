@@ -16,7 +16,7 @@ const Hero = (props) => (
       </SectionText>
       <Button onClick={() => window.open('mailto: kwontaesok1997@gmail.com')}>Email</Button>
       <Button>
-        <a href='/images/tk.resume.pdf' download='Taesok Kwon Resume.pdf' style={{color: 'white'}}>
+        <a href='/images/tk.resume.pdf' download='taesok_kwon_resume.pdf' style={{color: 'white'}}>
           Download resume
         </a>
       </Button>
