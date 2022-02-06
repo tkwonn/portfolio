@@ -7,7 +7,7 @@ export const teamProjects = [
     tags: ['Django', 'Vue', 'Konva.js'],
     hashtags: ['REST API', 'VueX'],
     source: 'https://github.com/Recursion-Group-K',
-    visit: 'https://sketch-skgl.herokuapp.com/signup/',
+    visit: 'https://sketch-skgl.herokuapp.com/',
     id: 0,
   },
   {
