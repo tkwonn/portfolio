@@ -8,7 +8,7 @@ export const teamProjects = [
     hashtags: ['REST API', 'VueX'],
     source: 'https://github.com/Recursion-Group-K',
     visit: 'https://sketch-skgl.herokuapp.com/signup/',
-    id: 1,
+    id: 0,
   },
   {
     title: 'Connect 4',
