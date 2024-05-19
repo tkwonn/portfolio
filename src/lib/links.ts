@@ -2,16 +2,16 @@ export const links = [
   {
     name: "Home",
     url: "/",
-    description: "My personal website",
+    description: "My portfolio website",
   },
   {
     name: "Resume",
     url: "/resume",
-    description: "This page provides an overview of my skills and experience, with an option to download my resume as a PDF file.",
+    description: "使用してきたテックスタックとこれまでの経験について紹介しています。履歴書のPDFをダウンロードできます。",
   },
   {
     name: "Projects",
     url: "/projects",
-    description: "This page lists all the projects I've worked on, with live demos, Github links, and summaries of what I learned from each project.",
+    description: "制作してきたプロジェクトの一覧を掲載しています。各プロジェクトの概要やアプリURL、GitHubリンクを確認できます。",
   }
 ] as const;

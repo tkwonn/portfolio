@@ -7,7 +7,7 @@ import Link from "next/link";
 
 type ProjectProps = (typeof projectsData)[number];
 
-export default function Card({ title, description, tags, imageUrl, githubUrl, liveUrl }: ProjectProps) {
+export default function Card({ title, description, tags, imageUrl, githubUrl, appUrl }: ProjectProps) {
   return (
     <motion.div
       className="group mb-8 sm:mb-8 last:mb-0 w-full sm:w-[calc(50%-16px)] px-4"
@@ -22,7 +22,7 @@ export default function Card({ title, description, tags, imageUrl, githubUrl, li
           />
           <div className="p-5">
             <h3 className="text-2xl font-semibold">{title}</h3>
-            <p className="mt-2 leading-relaxed text-gray-700 dark:text-black">
+            <p className="mt-2 text-left leading-relaxed text-gray-700 dark:text-black">
               {description}
             </p>
             <ul className="flex flex-wrap mt-4 gap-2">
@@ -45,13 +45,13 @@ export default function Card({ title, description, tags, imageUrl, githubUrl, li
                   GitHub
                 </a>
               </Link>
-              <Link href={liveUrl} passHref legacyBehavior>
+              <Link href={appUrl} passHref legacyBehavior>
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
                   className="border border-gray-700 text-gray-700 px-2 py-2 text-sm rounded-lg transition hover:bg-gray-700 hover:text-white"
                 >
-                  Live Demo
+                  App URL
                 </a>
               </Link>
             </div>

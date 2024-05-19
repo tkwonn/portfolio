@@ -60,10 +60,10 @@ export default function Home() {
               />
             </Link>
           </div>
-          <p className="py-4 font-bold">Hello, I'm Taesok Kwon.</p>
+          {/* <p className="py-4 font-bold"></p> */}
         </motion.h1>
 
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-wrap justify-center py-4 gap-6">
           {links.slice(1).map((link) => (
             <motion.div
               key={link.name}

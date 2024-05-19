@@ -4,7 +4,8 @@ export const languages = [
     "CSS",
     "TypeScript",
     "Python",
-    "PHP"
+    "PHP",
+    "Java"
 ] as const;
 
 export const frameworks = [
@@ -12,11 +13,11 @@ export const frameworks = [
     "Vue.js",
     "Next.js",
     "Django",
-]
+] as const;
 
 export const others = [
     "Redux",
     "MySQL",
     "Firebase",
     "Tailwind CSS"
-]
+] as const;

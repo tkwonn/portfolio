@@ -7,7 +7,7 @@ import 'react-vertical-timeline-component/style.min.css';
 
 export default function Experiences() {
   return (
-    <section className="max-w-[53rem] scroll-mt-28 mb-10">
+    <section className="max-w-[60rem] scroll-mt-28 mb-10">
       <h2 className="text-3xl font-medium mb-8 text-center">Education & Experience</h2>
       <VerticalTimeline lineColor="" animate={false}>
         {experiencesData.map((item, index) => (
@@ -32,8 +32,8 @@ export default function Experiences() {
                     }}
                 >
                     <h3 className="font-semibold capitalize">{item.title}</h3>
-                    <p className="font-normal !mt-0">{item.location}</p>
-                    <p className="!mt-1 font-normal text-gray-700 dark:text-white/75">
+                    <p className="!mt-1 !text-xs text-gray-700/70">{item.location}</p>
+                    <p className="!mt-2 !text-sm text-gray-900">
                         {item.description}
                     </p>
                 </VerticalTimelineElement>
