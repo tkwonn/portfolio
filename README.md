@@ -19,7 +19,7 @@ While it serves as a portfolio, the main objective is to gain experience in sett
 
 <br>
 
-For easier future updates, I’ve organized my project to require changes solely in the JSON within the `projects.ts` file (same for `experiences.ts` and `skills.ts`).
+To simplify future updates, I’ve organized my project to require changes solely in the JSON within the `projects.ts` file (same for `experiences.ts` and `skills.ts`).
 
 ```TypeScript
 export const projectsData = [
