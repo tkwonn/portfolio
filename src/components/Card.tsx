@@ -45,7 +45,8 @@ export default function Card({ title, description, tags, imageUrl, githubUrl, ap
                   GitHub
                 </a>
               </Link>
-              <Link href={appUrl} passHref legacyBehavior>
+              {appUrl && (
+                <Link href={appUrl} passHref legacyBehavior>
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
@@ -54,6 +55,7 @@ export default function Card({ title, description, tags, imageUrl, githubUrl, ap
                   App URL
                 </a>
               </Link>
+              )}
             </div>
           </div>
         </div>

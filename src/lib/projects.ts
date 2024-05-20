@@ -13,7 +13,7 @@ export const projectsData = [
         "これまでに制作してきたプロジェクトをまとめたポートフォリオサイトです。Next.jsを用いたSSR・CSRによるページ生成、NGINXサーバのセットアップ、AWS EC2へのデプロイを経験しました。",
       tags: ["NGINX", "AWS EC2", "TypeScript", "React", "Next.js", "Tailwind CSS"],
       githubUrl: 'https://github.com/tkwonn/portfolio',
-      appUrl: 'https://taesokkwon.com/',
+      appUrl: 'https://www.taesokkwon.com/',
     },
     {
       imageUrl: nodata,
@@ -31,7 +31,7 @@ export const projectsData = [
         "描画玩具「Etch A Sketch」をWebアプリケーションとして実装しました。本家の左右のダイヤルをパソコンの特定のキーに対応させ、同様の機能を実現しています。この実装にはKonva.jsを使用し、ユーザーが線の色や太さを自由に変更でき、作品を友達とシェアすることもできます。このプロジェクトは、3層アーキテクチャに基づいて設計されています。",
       tags: ["Vue.js", "Django", "MySQL", "Konva"],
       githubUrl: 'https://github.com/Recursion-Group-K/sketch',
-      appUrl: 'https://sketch-skgl.herokuapp.com/',
+      appUrl: '',
     },
     {
       imageUrl: connect4,
@@ -49,7 +49,7 @@ export const projectsData = [
         "Connect 4は、2人のプレイヤーが交互に色のついたボールを列に落とし、縦、横、または斜めに4つ並べることを競うターン制のゲームです。AIとの対戦機能をモンテカルロ木探索アルゴリズムを用いて実装し、ReactのContext APIを使用してアプリケーションの状態を管理しました。",
       tags: ["TypeScript", "React", "Redux", "Firebase", "React Query"],
       githubUrl: '/',
-      appUrl: '/',
+      appUrl: '',
     },
     {
       imageUrl: clickEmpire,
