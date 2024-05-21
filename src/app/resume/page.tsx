@@ -11,7 +11,7 @@ export default function Resume() {
         <div className="flex justify-center mb-8">
           <a
             className="group bg-gray-100 dark:bg-gray-800 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-gray-300 dark:border-gray-700 dark:text-white"
-            href="/resume-ja.docx.pdf"
+            href="/resume-ja.pdf"
             download
           >
             Download Resume
