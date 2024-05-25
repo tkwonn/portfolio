@@ -12,6 +12,6 @@ export const links = [
   {
     name: "Projects",
     url: "/projects",
-    description: "制作してきたプロジェクトの一覧を掲載しています。各プロジェクトの概要やアプリURL、GitHubリンクを確認できます。",
+    description: "制作してきたプロジェクトの一覧を掲載しています。各プロジェクトの概要やアプリURL、GitHubリンクをご覧頂けます。",
   }
 ] as const;

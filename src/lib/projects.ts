@@ -3,14 +3,14 @@ import sketch from "../../public/img/sketch.png";
 import connect4 from "../../public/img/connect4.png";
 import amiibo from "../../public/img/amiibo.png";
 import clickEmpire from "../../public/img/clickempire.png";
-import nodata from "../../public/img/nodata.png";
+// import nodata from "../../public/img/nodata.png";
 
 export const projectsData = [
     {
       imageUrl: portfolio,
       title: "Portfolio Website",
       description:
-        "これまでに制作してきたプロジェクトをまとめたポートフォリオサイトです。Next.jsを用いてCSR・SSRによるページ生成を行い、NGINXサーバをセットアップして、AWS EC2にデプロイしました。",
+        "これまでに制作してきたプロジェクトをまとめたポートフォリオサイトです。Next.jsを用いてCSR・SSRによるページ生成を行い、NGINXサーバをセットアップして、AWS EC2インスタンスにデプロイしました。",
       tags: ["NGINX", "AWS EC2", "TypeScript", "React", "Next.js", "Tailwind CSS"],
       githubUrl: 'https://github.com/tkwonn/portfolio',
       appUrl: '/',
@@ -28,7 +28,7 @@ export const projectsData = [
       imageUrl: sketch,
       title: "Etch A Sketch",
       description:
-        "描画玩具「Etch A Sketch」をWebアプリケーションとして実装しました。本家の左右のダイヤルをパソコンの特定のキーに対応させ、同様の機能を実現しています。この実装にはKonva.jsを使用し、ユーザーが線の色や太さを自由に変更でき、作品を友達とシェアすることもできます。このプロジェクトは、3層アーキテクチャに基づいて設計されています。",
+        "描画玩具「Etch A Sketch」をWebアプリケーションとして実装しました。キャンバス機能の実装にはKonva.jsを使用し、ユーザーが線の色や太さを自由に変更でき、作品を友達とシェアできます。このプロジェクトでは、3層アーキテクチャに基づいて、プレゼンテーション層をVue.js、ロジック層をDjango、データ層にPostgreSQLを使用しました。クライアント/サーバ間のデータのやり取りでは、Django REST Frameworkを活用してWeb APIを作成しました。",
       tags: ["Vue.js", "Django", "PostgreSQL", "Konva"],
       githubUrl: 'https://github.com/Recursion-Group-K/sketch',
       appUrl: 'https://sketch-frontend-d11d98fe289b.herokuapp.com/',
@@ -46,7 +46,7 @@ export const projectsData = [
       imageUrl: amiibo,
       title: "Amiibo Atlas (開発途中）",
       description:
-        "Amiibo（任天堂のフィギュア）コレクターや愛好家のためのウェブアプリケーションです。このプロジェクトでは、Amiibo APIを使用し、Amiiboフィギュアに関する詳細情報をユーザーに提供します。ユーザは気に入ったAmiiboをウィッシュリストに入れたり、愛用しているAmiiboフィギュアを登録し、友達とシェアすることができます。",
+        "Amiibo（任天堂のフィギュア）コレクターや愛好家のためのウェブアプリケーションです。このプロジェクトでは、Amiibo APIを使用し、Amiiboフィギュアに関する情報をユーザーに提供します。ユーザは気に入ったAmiiboをウィッシュリストに入れたり、愛用しているAmiiboフィギュアを登録し、友達とシェアできます。",
       tags: ["TypeScript", "React", "Redux", "Firebase", "React Query"],
       githubUrl: 'https://github.com/Amiibo-Atlas/Amiibo-Atlas',
       appUrl: '',

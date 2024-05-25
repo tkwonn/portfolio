@@ -8,7 +8,7 @@ import 'react-vertical-timeline-component/style.min.css';
 export default function Experiences() {
   return (
     <section className="max-w-[60rem] scroll-mt-28 mb-10">
-      <h2 className="text-3xl font-medium mb-8 text-center">Education</h2>
+      <h2 className="text-3xl font-medium mb-8 text-center">学歴</h2>
       <VerticalTimeline lineColor="" animate={false}>
         {experiencesData.map((item, index) => (
             <React.Fragment key={index}>
