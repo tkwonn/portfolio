@@ -6,7 +6,7 @@ module.exports = {
   deploy : {
     production : {
       user : 'ubuntu',
-      host : '52.41.118.224',
+      host : '54.202.79.95',
       ref  : 'origin/main',
       repo : 'https://github.com/tkwonn/portfolio.git',
       path : '/home/ubuntu',
