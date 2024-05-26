@@ -47,6 +47,8 @@ export default function Home() {
               <img
                 alt="LinkedIn"
                 src="https://img.shields.io/badge/LinkedIn-Taesok Kwon-blue?style=flat-square&logo=linkedin"
+                width="140"
+                height="20"
               />
             </Link>
             <Link
@@ -57,6 +59,8 @@ export default function Home() {
               <img
                 alt="GitHub"
                 src="https://img.shields.io/badge/GitHub-tkwonn-black?style=flat-square&logo=github"
+                width="140"
+                height="20"
               />
             </Link>
           </div>
