@@ -34,11 +34,11 @@ server {
         proxy_cache_bypass $http_upgrade;
     }
 
-    listen 443 ssl; # SSL configuration
-    ssl_certificate /path/to/fullchain.pem; # SSL certificate
-    ssl_certificate_key /path/to/privkey.pem; # SSL certificate key
-    include /path/to/ssl-config-options.conf; # SSL options configuration
-    ssl_dhparam /path/to/ssl-dhparams.pem; # DH params for SSL
+    listen 443 ssl http2;
+    ssl_certificate /path/to/fullchain.pem;
+    ssl_certificate_key /path/to/privkey.pem;
+    include /path/to/ssl-config-options.conf; 
+    ssl_dhparam /path/to/ssl-dhparams.pem;
 }
 ```
 
