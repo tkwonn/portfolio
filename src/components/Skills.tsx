@@ -6,7 +6,7 @@ const SkillTable = ({ title, skills }: { title: string, skills: readonly any[] }
     <div className="overflow-x-auto">
       <table className="min-w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-white">
         <thead>
-          <tr className="border border-white">
+          <tr className="border border-gray-300 dark:border-white">
             <th className="py-2 px-4 bg-gray-100 dark:bg-gray-400">技術</th>
             <th className="py-2 px-4 bg-gray-100 dark:bg-gray-400">使用年数</th>
             <th className="py-2 px-4 bg-gray-100 dark:bg-gray-400">習熟度</th>

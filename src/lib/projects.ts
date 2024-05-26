@@ -29,7 +29,7 @@ export const projectsData = [
       title: "Etch A Sketch",
       description:
         "描画玩具「Etch A Sketch」をWebアプリケーションとして実装しました。キャンバス機能の実装にはKonva.jsを使用し、ユーザーが線の色や太さを自由に変更でき、作品を友達とシェアできます。このプロジェクトでは、3層アーキテクチャに基づいて、プレゼンテーション層をVue.js、ロジック層をDjango、データ層にPostgreSQLを使用しました。クライアント/サーバ間のデータのやり取りでは、Django REST Frameworkを活用してWeb APIを作成しました。",
-      tags: ["Vue.js", "Django", "PostgreSQL", "Konva"],
+      tags: ["Vue.js", "Django", "PostgreSQL", "JWT", "Konva"],
       githubUrl: 'https://github.com/Recursion-Group-K/sketch',
       appUrl: 'https://sketch-frontend-d11d98fe289b.herokuapp.com/',
     },

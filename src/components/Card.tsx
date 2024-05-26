@@ -30,7 +30,7 @@ export default function Card({ title, description, tags, imageUrl, githubUrl, ap
                 <li key={index}>
                   <img
                     alt={tag}
-                    src={`https://img.shields.io/badge/-${tag}-222.svg?logo=${tag}&style=flat`}
+                    src={`https://img.shields.io/badge/-${tag}-222.svg?logo=${tag === 'JWT' ? 'JSON%20web%20tokens' : tag}&style=flat`}
                   />
                 </li>
               ))}
