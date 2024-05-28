@@ -18,15 +18,12 @@ While it serves as a portfolio, the main objective is to gain experience in sett
 
 ### NGINX Configuration
 
-- Set up a reverse proxy
-
-
 ```nginx
 server {
     server_name example.com www.example.com;
 
     location / {
-        proxy_pass http://localhost:3000;
+        proxy_pass http://localhost:3000; // port on which the application is running
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
@@ -34,7 +31,7 @@ server {
         proxy_cache_bypass $http_upgrade;
     }
 
-    listen 443 ssl http2;
+    listen 443 ssl http2; // Add http/2
     ssl_certificate /path/to/fullchain.pem;
     ssl_certificate_key /path/to/privkey.pem;
     include /path/to/ssl-config-options.conf; 
