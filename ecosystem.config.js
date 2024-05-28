@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   apps : [{
     script: 'npm start',
@@ -6,7 +8,7 @@ module.exports = {
   deploy : {
     production : {
       user : 'ubuntu',
-      host : '54.202.79.95',
+      host : process.env.HOST,
       ref  : 'origin/main',
       repo : 'https://github.com/tkwonn/portfolio.git',
       path : '/home/ubuntu',
