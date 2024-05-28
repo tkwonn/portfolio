@@ -16,31 +16,7 @@ While it serves as a portfolio, the main objective is to gain experience in sett
 | Frontend language/framework/library      | TypeScript / Next.js / Tailwind CSS      |
 | Others                                   | HTTPS with Certbot                       |
 
-### NGINX Configuration
-
-```nginx
-server {
-    server_name example.com www.example.com;
-
-    location / {
-        proxy_pass http://localhost:3000; // port on which the application is running
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection 'upgrade';
-        proxy_set_header Host $host;
-        proxy_cache_bypass $http_upgrade;
-    }
-
-    listen 443 ssl http2; // Add http/2
-    ssl_certificate /path/to/fullchain.pem;
-    ssl_certificate_key /path/to/privkey.pem;
-    include /path/to/ssl-config-options.conf; 
-    ssl_dhparam /path/to/ssl-dhparams.pem;
-}
-```
-
 ### PM2 Configuration
-
 
 - Used PM2 for automatic restarts and monitoring.
 - This script is used for deploying the application to an AWS EC2 instance from local environment.
