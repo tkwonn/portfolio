@@ -20,7 +20,7 @@ export const experiencesData = [
   {
     title: "オレゴン州立大学",
     location: "アメリカ　オレゴン州",
-    description: `コンピュータサイエンス専攻、今年の6月に学士号を取得予定。在学中、以下のポジションのインターンシップに参加しました。https://jobs.oregonstate.edu/postings/150253`,
+    description: `コンピュータサイエンス専攻、今年の6月に学士号を取得予定。`,
     icon: React.createElement(LuGraduationCap),
     date: "2022 - Expected 2024.6",
   },

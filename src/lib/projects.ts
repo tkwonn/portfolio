@@ -3,7 +3,6 @@ import sketch from "../../public/img/sketch.png";
 import connect4 from "../../public/img/connect4.png";
 import amiibo from "../../public/img/amiibo.png";
 import clickEmpire from "../../public/img/clickempire.png";
-// import nodata from "../../public/img/nodata.png";
 
 export const projectsData = [
     {

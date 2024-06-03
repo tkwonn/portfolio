@@ -8,12 +8,12 @@ export const languages = [
     {
         "name": "JavaScript",
         "years": "3.5 年",
-        "proficiency": "DOM操作、ES6以降の新機能（アロー関数、テンプレートリテラル、デストラクチャリング）、async/awaitによる非同期通信を実装できる。"
+        "proficiency": "DOM操作、ES6以降の新機能（アロー関数、テンプレートリテラル、デストラクチャリング）、非同期通信を用いてブラウザアプリを開発できる。"
     },
     {
         "name": "TypeScript",
         "years": "1 年",
-        "proficiency": "型の厳格なチェックが必要な部分に型定義を行い、リスクが低い部分では動的型付けを使用することで、コードの柔軟性と安全性のバランスを保って開発ができる。"
+        "proficiency": "any型やasを避けて型定義を行い、リスクが低い部分では動的型付けを使用することで、コードの柔軟性と安全性のバランスを保って開発ができる。"
     },
     // {
     //     "name": "Python",
@@ -33,12 +33,12 @@ export const languages = [
     {
         "name": "Vue.js",
         "years": "2 年",
-        "proficiency": "リアクティブデータバインディング、SPAの構築に必要なルーティング管理、Vuexによる状態管理、ライフサイクルフックを理解してアプリを開発できる。"
+        "proficiency": "SPAの構築に必要なルーティング管理、Vuexによる状態管理、ライフサイクルフックを理解してアプリを開発できる。"
     },
     {
         "name": "React",
         "years": "2 年",
-        "proficiency": "React Hooks、React Router、Context APIやReduxによる状態管理を理解してアプリを開発できる。"
+        "proficiency": "Container-Presentational Patternに従って、ビューとロジックを分離した開発ができる。Context APIやReduxによる状態管理、Jestによるテストも開発で使用。"
     },
     {
         "name": "Next.js",
@@ -79,13 +79,13 @@ export const others = [
     {
         "name": "NGINX",
         "years": "~ 0.5 年",
-        "proficiency": "リバースプロキシの設定、SSL証明書の設定ができる。"
+        "proficiency": "ウェブサーバを立ち上げ、リバースプロキシの設定、SSL証明書の設定ができる。"
     },
-    {
-        "name": "Docker",
-        "years": "~ 0.5 年",
-        "proficiency": "Docker Hubからイメージを取得して、コンテナを起動する。"
-    },
+    // {
+    //     "name": "Docker",
+    //     "years": "~ 0.5 年",
+    //     "proficiency": "Docker Hubからイメージを取得して、コンテナを起動する。"
+    // },
     {
         "name": "AWS / GCP",
         "years": "~ 0.5 年",
