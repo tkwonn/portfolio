@@ -10,11 +10,13 @@ While it serves as a portfolio, the main objective is to gain experience in sett
 
 | **Category**                             | **Technology**                           |
 |------------------------------------------|------------------------------------------|
-| Hosting                                  | AWS EC2 (Ubuntu platform)                |
+| VM                                       | AWS EC2 (Ubuntu platform)                |
 | Web server                               | NGINX                                    |
 | Process manager                          | PM2                                      |
-| Frontend language/framework/library      | TypeScript / Next.js / Tailwind CSS      |
-| Others                                   | HTTPS with Certbot                       |
+| Frontend                                 | TypeScript, Next.js, Tailwind CSS        |
+| HTTPS                                    | Certbot                                  |
+| DNS                                      | DNS settings through Namecheap           |
+
 
 ### PM2 Configuration
 
