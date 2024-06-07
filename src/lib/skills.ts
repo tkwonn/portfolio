@@ -3,17 +3,17 @@ export const languages = [
     {
         "name": "HTML/CSS",
         "years": "3.5 年",
-        "proficiency": "セマンティックHTMLを使用したウェブページの作成、FlexboxやGridを用いたレイアウト、レスポンシブデザインを実装できる。"
+        "proficiency": "セマンティックなマークアップ、FlexboxやGridを用いたレイアウト、レスポンシブデザインを実装できる。"
     },
     {
         "name": "JavaScript",
         "years": "3.5 年",
-        "proficiency": "DOM操作、ES6以降の新機能（アロー関数、テンプレートリテラル、デストラクチャリング）、非同期通信を用いてブラウザアプリを開発できる。"
+        "proficiency": "DOM操作、ES6以降の新機能（アロー関数、テンプレートリテラル、デストラクチャリング）、非同期通信を理解してブラウザアプリ等を開発できる。"
     },
     {
         "name": "TypeScript",
         "years": "1 年",
-        "proficiency": "any型やasを避けて型定義を行い、リスクが低い部分では動的型付けを使用することで、コードの柔軟性と安全性のバランスを保って開発ができる。"
+        "proficiency": "any型やasを避けて型定義を行える。"
     },
     // {
     //     "name": "Python",
@@ -38,28 +38,28 @@ export const languages = [
     {
         "name": "React",
         "years": "2 年",
-        "proficiency": "Container-Presentational Patternに従って、ビューとロジックを分離した開発ができる。Context APIやReduxによる状態管理、Jestによるテストも開発で使用。"
+        "proficiency": "ビューとロジックを分離した開発ができる。Context APIやReduxによる状態管理、Jestによるテストも開発で使用。"
     },
     {
         "name": "Next.js",
         "years": "1 年",
-        "proficiency": "SSRによる初回ロードの高速化とSSGによるパフォーマンス最適化、動的ルーティングによるナビゲーションについて理解してウェブサイトを作成できる。"
+        "proficiency": "SSRによる初回ロードの高速化とSSGによるパフォーマンス最適化、動的ルーティングについて理解してウェブサイトを作成できる。"
     },
     {
         "name": "Django",
         "years": "0.5 年",
-        "proficiency": "Django REST frameworkを使用したWeb APIの作成、PostgreSQLを使用したモデルの作成とデータベース操作を行うことができる。"
+        "proficiency": "Django REST framework + JWTを使用したWeb APIの作成、PostgreSQLを使用したモデルの作成とデータベース操作を行うことができる。"
     },
 ] as const;
 
 export const databases = [
     {
-        "name": "MySQL",
+        "name": "MySQL / PostgreSQL",
         "years": "1.5 年",
         "proficiency": "基礎的なDDL・DML、集計関数、GROUP BY、HAVING、JOINなどが書ける。"
     },
     {
-        "name": "Cloud Firestore",
+        "name": "MongoDB / Cloud Firestore",
         "years": "1.5 年",
         "proficiency": "リファレンスを参照しながら、データのCRUD操作を行い、階層データ構造によるデータの管理ができる。"
     },
@@ -85,6 +85,11 @@ export const others = [
     //     "name": "Docker",
     //     "years": "~ 0.5 年",
     //     "proficiency": "Docker Hubからイメージを取得して、コンテナを起動する。"
+    // },
+    // {
+    //     "name": "Jest / React Testing Library",
+    //     "years": "1 年",
+    //     "proficiency": "ユニット、コンポーネント、結合、E2Eテストを書くことができる。"
     // },
     {
         "name": "AWS / GCP",
