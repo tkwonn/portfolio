@@ -6,30 +6,25 @@ export const languages = [
         "proficiency": "セマンティックなマークアップ、FlexboxやGridを用いたレイアウト、レスポンシブデザインを実装できる。"
     },
     {
-        "name": "JavaScript",
-        "years": "3.5 年",
-        "proficiency": "DOM操作、ES6以降の新機能（アロー関数、テンプレートリテラル、デストラクチャリング）、非同期通信を理解してブラウザアプリ等を開発できる。"
+        "name": "Type/JavaScript",
+        "years": "1/3.5 年",
+        "proficiency": "DOM操作、非同期通信を活用したリアルタイムアプリケーションの開発ができる。any型やasを避けて厳格な型定義を行える。"
     },
     {
-        "name": "TypeScript",
-        "years": "1 年",
-        "proficiency": "any型やasを避けて型定義を行える。"
+        "name": "Python",
+        "years": "3 年",
+        "proficiency": "主にコーディング問題を解く際やWebスクレイピングに使用。"
     },
-    // {
-    //     "name": "Python",
-    //     "years": "3 年",
-    //     "proficiency": ""
-    // },
     // {
     //     "name": "PHP",
     //     "years": "1.5 年",
     //     "proficiency": "型の厳格なチェックが必要な部分に型定義を行い、リスクが低い部分では動的型付けを使用することで、コードの柔軟性と安全性のバランスを保って開発ができる。"
     // },
-    // {
-    //     "name": "Java",
-    //     "years": "1.5 年",
-    //     "proficiency": ""
-    // },
+    {
+        "name": "Java",
+        "years": "1.5 年",
+        "proficiency": "オブジェクト指向プログラミングの学習時に使用。Kotlinで簡単なAndroidアプリの開発経験あり。"
+    },
     {
         "name": "Vue.js",
         "years": "2 年",
@@ -38,12 +33,7 @@ export const languages = [
     {
         "name": "React",
         "years": "2 年",
-        "proficiency": "ビューとロジックを分離した開発ができる。Context APIやReduxによる状態管理、Jestによるテストも開発で使用。"
-    },
-    {
-        "name": "Next.js",
-        "years": "1 年",
-        "proficiency": "SSRによる初回ロードの高速化とSSGによるパフォーマンス最適化、動的ルーティングについて理解してウェブサイトを作成できる。"
+        "proficiency": "ビューとロジックの分離、Context APIやReduxによる状態管理、Jestによるテストを用いて開発できる。フレームワークではNext.jsを使用"
     },
     {
         "name": "Django",
@@ -94,6 +84,6 @@ export const others = [
     {
         "name": "AWS / GCP",
         "years": "~ 0.5 年",
-        "proficiency": "クラウドVMを作成して、SSHで繋いで、アプリをデプロイすることができる。"
+        "proficiency": "クラウドVMを作成して、SSHで繋いで、アプリをデプロイすることができる。Cloud Storageの使用経験あり。"
     }
 ] as const;
