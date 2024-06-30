@@ -1,3 +1,4 @@
+import video from "../../public/img/video.png";
 import portfolio from "../../public/img/portfolio.png";
 import sketch from "../../public/img/sketch.png";
 import connect4 from "../../public/img/connect4.png";
@@ -5,6 +6,15 @@ import amiibo from "../../public/img/amiibo.png";
 import clickEmpire from "../../public/img/clickempire.png";
 
 export const projectsData = [
+    {
+      imageUrl: video,
+      title: "Video Compressor",
+      description:
+        "FFMPEGライブラリを活用し、ユーザーがアップロードした動画を圧縮、変換、編集できるデスクトップアプリを開発しました。OSにフルアクセス可能なNode.js環境を提供するElectronのメインプロセスとHTMLのDOMにアクセス可能なレンダラープロセス間の通信によって、効率的なイベント処理を実現しています。",
+      tags: ["Electron", "TypeScript", "React", "Tailwind CSS", "ffmpeg"],
+      githubUrl: 'https://github.com/tkwonn/video-compressor',
+      appUrl: 'https://github.com/tkwonn/video-compressor/releases',
+    },
     {
       imageUrl: portfolio,
       title: "Portfolio Website",
@@ -14,15 +24,6 @@ export const projectsData = [
       githubUrl: 'https://github.com/tkwonn/portfolio',
       appUrl: '/',
     },
-    // {
-    //   imageUrl: nodata,
-    //   title: "Video Compressor",
-    //   description:
-    //     "ffmpegを使用して動画ファイルを圧縮し、ダウンロードすることができるWebアプリケーションです。OSのシステムコール、データベースへのアクセス、Linux環境での作業についてアウトプットすることができました。",
-    //   tags: ["TypeScript", "React", "Tailwind CSS", "ffmpeg"],
-    //   githubUrl: '',
-    //   appUrl: '',
-    // },
     {
       imageUrl: sketch,
       title: "Etch A Sketch",
@@ -33,6 +34,15 @@ export const projectsData = [
       appUrl: 'https://sketch-frontend-d11d98fe289b.herokuapp.com/',
     },
     {
+      imageUrl: amiibo,
+      title: "Amiibo Atlas",
+      description:
+        "Amiibo（任天堂のフィギュア）コレクターや愛好家のためのウェブアプリケーションです。このプロジェクトでは、Amiibo APIを使用し、Amiiboフィギュアに関する情報をユーザーに提供します。ユーザは気に入ったAmiiboをウィッシュリストに入れたり、愛用しているAmiiboフィギュアを登録し、友達とシェアできます。",
+      tags: ["TypeScript", "React", "Redux", "Firebase", "React Query"],
+      githubUrl: 'https://github.com/Amiibo-Atlas/Amiibo-Atlas',
+      appUrl: 'https://amiibo-atlas.netlify.app/amiibos',
+    },
+    {
       imageUrl: connect4,
       title: "Connect 4",
       description:
@@ -40,15 +50,6 @@ export const projectsData = [
       tags: ["React", "Next.js", "Context API"],
       githubUrl: 'https://github.com/TeamE-React/connect-4',
       appUrl: 'https://teame-connect4.vercel.app/',
-    },
-    {
-      imageUrl: amiibo,
-      title: "Amiibo Atlas (開発途中）",
-      description:
-        "Amiibo（任天堂のフィギュア）コレクターや愛好家のためのウェブアプリケーションです。このプロジェクトでは、Amiibo APIを使用し、Amiiboフィギュアに関する情報をユーザーに提供します。ユーザは気に入ったAmiiboをウィッシュリストに入れたり、愛用しているAmiiboフィギュアを登録し、友達とシェアできます。",
-      tags: ["TypeScript", "React", "Redux", "Firebase", "React Query"],
-      githubUrl: 'https://github.com/Amiibo-Atlas/Amiibo-Atlas',
-      appUrl: '',
     },
     {
       imageUrl: clickEmpire,

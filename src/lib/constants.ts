@@ -1,1 +1,1 @@
-export const UPDATED_DATE="2024/6/4"
+export const UPDATED_DATE="2024/6/30"
