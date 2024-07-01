@@ -6,7 +6,7 @@
 This is a personal portfolio project designed to showcase my personal background, skills, and projects.   
 While it serves as a portfolio, the main objective is to gain experience in setting up a web server and deploying a static site to a cloud platform.
 
-## Technologies Used
+## Technology
 
 | **Category**                             | **Technology**                           |
 |------------------------------------------|------------------------------------------|
