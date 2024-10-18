@@ -10,7 +10,7 @@ module.exports = {
     deploy: {
         production: {
             user: 'ubuntu',
-            host: process.env.HOST,
+            host: process.env.EC2_HOST,
             ref: 'origin/main',
             repo: 'https://github.com/tkwonn/portfolio.git',
             path: '/home/ubuntu',
