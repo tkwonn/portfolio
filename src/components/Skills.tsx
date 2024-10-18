@@ -16,13 +16,13 @@ const SkillTable = ({
                 <thead>
                     <tr className="border border-gray-300 text-xs sm:text-base dark:border-white">
                         <th className="bg-gray-100 px-2 py-2 sm:px-4 dark:bg-gray-400">
-                            技術
+                            Technology
                         </th>
                         <th className="w-20 bg-gray-100 px-2 py-2 sm:w-36 sm:px-4 dark:bg-gray-400">
-                            使用年数
+                            Years
                         </th>
                         <th className="bg-gray-100 px-2 py-2 sm:px-4 dark:bg-gray-400">
-                            習熟度
+                            Level of experience
                         </th>
                     </tr>
                 </thead>
@@ -53,11 +53,11 @@ export default function Skills() {
     return (
         <section className="mx-auto mb-16 max-w-[90%] scroll-mt-20 md:max-w-[53rem]">
             <h2 className="mb-8 text-center text-2xl font-medium sm:text-3xl md:text-3xl">
-                スキル
+                Skills
             </h2>
-            <SkillTable title="言語とフレームワーク" skills={languages} />
-            <SkillTable title="データベース" skills={databases} />
-            <SkillTable title="その他" skills={others} />
+            <SkillTable title="Languages & Frameworks" skills={languages} />
+            <SkillTable title="Databases" skills={databases} />
+            <SkillTable title="Others" skills={others} />
         </section>
     );
 }
