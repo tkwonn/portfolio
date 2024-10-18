@@ -40,15 +40,13 @@ jobs:
       - name: Install PM2
         run: npm install pm2 -g
 
-      - name: Set up SSH key
-        uses: shimataro/ssh-key-action@v2
+      - name: Start SSH Agent and Add Key
+        uses: webfactory/ssh-agent@v0.5.4
         with:
-          key: ${{ secrets.EC2_SSH_KEY }}
-          known_hosts: ''  # 空の文字列を指定してエラーを回避
+          ssh-private-key: ${{ secrets.EC2_SSH_KEY }}
 
       - name: Add EC2 host to known_hosts
         run: |
-          mkdir -p ~/.ssh
           ssh-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
 
       - name: Deploy to EC2 server
