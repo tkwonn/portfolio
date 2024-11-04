@@ -2,34 +2,43 @@ name: deploy to EC2
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
-  lint-and-format:
-    runs-on: ubuntu-latest
+  check-lint-and-format:
+    runs-on: ubuntu-22.04
 
     steps:
       - name: Check out code
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
+      - name: Set up Node.js 🛎
         uses: actions/setup-node@v3
         with:
           node-version: 'lts/*'
+          cache: 'npm'
 
-      - name: Install dependencies
+      - name: Cache node_modules 📦
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node_modules-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node_modules-
+
+      - name: Install dependencies ‍💻
         run: npm ci
 
-      - name: Run ESLint
+      - name: Run ESLint 👀
         run: npm run lint
 
-      - name: Run Prettier
+      - name: Run Prettier 👀
         run: npm run check-format
 
   deploy:
-    needs: lint-and-format
-    runs-on: ubuntu-latest
+    needs: check-lint-and-format
+    runs-on: ubuntu-22.04
 
     steps:
       - name: Check out code
@@ -44,7 +53,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           known_hosts: ${{ secrets.EC2_HOST }}
 
-      - name: Deploy to EC2 server
+      - name: Deploy to EC2 server 🔨
         env:
           EC2_HOST: ${{ secrets.EC2_HOST }}
         run: |
