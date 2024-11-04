@@ -1,12 +1,11 @@
-name: Deploy to EC2
+name: deploy to EC2
 
 on:
   push:
-    branches: [ main ]  # Trigger on pushes to the main branch
-  workflow_dispatch:    # Allow manual triggering of the workflow
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
-  # Static Test Job
   lint-and-format:
     runs-on: ubuntu-latest
 
@@ -28,9 +27,8 @@ jobs:
       - name: Run Prettier
         run: npm run check-format
 
-  # Deployment Job
   deploy:
-    needs: lint-and-format  # Run this job only if lint-and-format succeeds
+    needs: lint-and-format
     runs-on: ubuntu-latest
 
     steps:

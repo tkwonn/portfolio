@@ -8,12 +8,12 @@ export const links = [
         name: 'Resume',
         path: '/resume',
         description:
-            '使用してきたテックスタックとこれまでの経験について紹介しています。履歴書のPDFをダウンロードできます。',
+            'Overview of my skills, experiences, and education history.',
     },
     {
         name: 'Projects',
         path: '/projects',
         description:
-            '制作してきたプロジェクトの一覧を掲載しています。各プロジェクトの概要やアプリURL、GitHubリンクをご覧頂けます。',
+            'List of my projects with summaries, live URLs, and GitHub links.',
     },
 ] as const;

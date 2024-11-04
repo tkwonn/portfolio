@@ -1,4 +1,4 @@
-import { SkillData, languages, databases, others } from '@/lib/skills';
+import { SkillData, languages, databases, misc } from '@/lib/skills';
 
 const SkillTable = ({
     title,
@@ -57,7 +57,7 @@ export default function Skills() {
             </h2>
             <SkillTable title="Languages & Frameworks" skills={languages} />
             <SkillTable title="Databases" skills={databases} />
-            <SkillTable title="Others" skills={others} />
+            <SkillTable title="Miscellaneous" skills={misc} />
         </section>
     );
 }

@@ -1,48 +1,44 @@
 <h1 align="center">
   Portfolio Website
-  <br>
 </h1>
 
-This is a personal portfolio project designed to showcase my personal background, skills, and projects.  
-While it serves as a portfolio, the main objective is to gain experience in setting up a web server and deploying a static website to a cloud platform.
+## What is this?
 
-## Technologies Used
+This is a personal portfolio project designed to showcase my personal background, skills, and projects.
+
+## Table of Contents
+
+-   [Built with](#built-with)
+-   [Server Configuration](#server-configuration)
+-   [CI/CD](#cicd)
+
+## Built with
 
 | **Category**    | **Technology**                    |
 | --------------- | --------------------------------- |
-| VM              | Amazon EC2 (Ubuntu platform)      |
+| VM              | Amazon EC2                        |
 | Web server      | Nginx                             |
-| Process manager | PM2                               |
+| Process manager | PM2 (JavaScript runtime Node.js)  |
 | Frontend        | TypeScript, Next.js, Tailwind CSS |
-| HTTPS           | Certbot                           |
-| DNS             | DNS settings through Namecheap    |
+| CI/CD           | GitHub Actions                    |
 
-### PM2 Configuration
+## Server Configuration
 
--   Used PM2 for automatic restarts and monitoring.
--   This script is used for deploying the application to an AWS EC2 instance from local environment.
+| Category             | Feature                | Description                                                         |
+| -------------------- | ---------------------- | ------------------------------------------------------------------- |
+| **SSL/TLS**          | HTTPS Redirect         | Automatically redirects all HTTP traffic to HTTPS                   |
+|                      | HTTP/2 Support         | Enabled for improved performance                                    |
+|                      | SSL Certificate        | Used Let's Encrypt                                                  |
+| **Security Headers** | X-Frame-Options        | - Prevents clickjacking attacks<br>- Allows same-origin frames only |
+|                      | X-Content-Type-Options | Prevents MIME-type sniffing                                         |
+|                      | X-XSS-Protection       | Blocks XSS attacks                                                  |
+| **Reverse Proxy**    | Proxy Pass             | Forwards requests to Node.js application server (localhost:3000)    |
 
-```javascript
-module.exports = {
-    apps: [
-        {
-            script: 'npm start',
-        },
-    ],
+## CI/CD
 
-    deploy: {
-        production: {
-            user: 'ubuntu',
-            host: 'server_ip',
-            ref: 'origin/main',
-            repo: 'https://github.com/username/repository.git',
-            path: '/path/to/deployment',
-            'pre-deploy-local': '',
-            'post-deploy':
-                'source ~/.nvm/nvm.sh && npm install && npm run build && pm2 reload ecosystem.config.js --env production',
-            'pre-setup': '',
-            ssh_options: 'ForwardAgent=yes',
-        },
-    },
-};
-```
+The project uses GitHub Actions for automated deployment with the following workflow:
+
+| Jobs             | Description                                                                  |
+| ---------------- | ---------------------------------------------------------------------------- |
+| **Static Tests** | - ESLint for code quality<br>- Prettier for code formatting                  |
+| **Deployment**   | - Automated deployment to EC2 using PM2<br>- Triggered on main branch pushes |

@@ -18,11 +18,6 @@ export const languages: readonly SkillData[] = [
             'DOM操作、非同期通信を活用したリアルタイムアプリケーションの開発ができる。any型やasを避けて厳格な型定義を行える。',
     },
     {
-        name: 'Python',
-        years: '3 yrs',
-        proficiency: '主にコーディング問題を解く際やWebスクレイピングに使用。',
-    },
-    {
         name: 'Java',
         years: '1.5 yrs',
         proficiency:
@@ -46,24 +41,36 @@ export const languages: readonly SkillData[] = [
         proficiency:
             'Django REST framework + JWTを使用したWeb APIの作成、PostgreSQLを使用したモデルの作成とデータベース操作を行うことができる。',
     },
+    {
+        name: 'Laravel',
+        years: '0.5 yrs',
+        proficiency:
+            'Django REST framework + JWTを使用したWeb APIの作成、PostgreSQLを使用したモデルの作成とデータベース操作を行うことができる。',
+    },
+    {
+        name: 'Go',
+        years: '0.5 yrs',
+        proficiency:
+            'Django REST framework + JWTを使用したWeb APIの作成、PostgreSQLを使用したモデルの作成とデータベース操作を行うことができる。',
+    },
 ] as const;
 
 export const databases: readonly SkillData[] = [
     {
-        name: 'MySQL / PostgreSQL',
+        name: 'MySQL',
         years: '1.5 yrs',
         proficiency:
             '基礎的なDDL・DML、集計関数、GROUP BY、HAVING、JOINなどが書ける。',
     },
     {
-        name: 'MongoDB / Cloud Firestore',
+        name: 'Cloud Firestore',
         years: '1.5 yrs',
         proficiency:
             'リファレンスを参照しながら、データのCRUD操作を行い、階層データ構造によるデータの管理ができる。',
     },
 ] as const;
 
-export const others: readonly SkillData[] = [
+export const misc: readonly SkillData[] = [
     {
         name: 'Git',
         years: '3 yrs',
@@ -77,18 +84,19 @@ export const others: readonly SkillData[] = [
             'Ubuntuを使用して、Unixの基礎コマンド、シェルスクリプトの作成、ファイルパーミッション設定などができる。',
     },
     {
-        name: 'NGINX',
+        name: 'Nginx',
         years: '~ 0.5 yrs',
         proficiency:
             'ウェブサーバを立ち上げ、リバースプロキシの設定、SSL証明書の設定ができる。',
     },
-    // {
-    //     "name": "Jest / React Testing Library",
-    //     "years": "1 yrs",
-    //     "proficiency": "ユニット、コンポーネント、結合、E2Eテストを書くことができる。"
-    // },
     {
-        name: 'AWS / GCP',
+        name: 'Docker',
+        years: '~ 0.5 yrs',
+        proficiency:
+            'ウェブサーバを立ち上げ、リバースプロキシの設定、SSL証明書の設定ができる。',
+    },
+    {
+        name: 'AWS',
         years: '~ 0.5 yrs',
         proficiency:
             'クラウドVMを作成して、SSHで繋いで、アプリをデプロイすることができる。Cloud Storageの使用経験あり。',

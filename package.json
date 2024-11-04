@@ -7,19 +7,27 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
+        "lint:fix": "next lint --fix",
+        "format": "prettier --write .",
         "check-format": "prettier --check .",
-        "check-all": "npm run lint && npm run check-format"
+        "check-all": "npm run lint && npm run check-format",
+        "prepare": "husky install"
     },
-    "*.{html,css,json,md}": [
-        "prettier --write"
-    ],
+    "lint-staged": {
+        "*.{js,jsx,ts,tsx}": [
+            "prettier --write",
+            "eslint --fix"
+        ],
+        "*.{html,css,json,md}": [
+            "prettier --write"
+        ]
+    },
     "dependencies": {
         "@types/node": "20.12.12",
         "@types/react": "18.3.2",
         "@types/react-dom": "18.3.0",
         "autoprefixer": "10.4.19",
         "dotenv": "^16.4.5",
-        "eslint-config-next": "14.2.3",
         "framer-motion": "^11.2.4",
         "next": "^14.2.3",
         "postcss": "8.4.38",
@@ -32,7 +40,11 @@
     },
     "devDependencies": {
         "@types/react-vertical-timeline-component": "^3.3.6",
-        "eslint": "^7.26.0",
+        "eslint": "^9.14.0",
+        "eslint-config-next": "^15.0.2",
+        "eslint-config-prettier": "^9.1.0",
+        "husky": "^9.1.6",
+        "lint-staged": "^15.2.10",
         "prettier": "^3.3.2",
         "prettier-plugin-tailwindcss": "^0.6.5"
     }

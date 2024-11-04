@@ -16,7 +16,7 @@ export default function Card({
     appUrl,
 }: ProjectProps) {
     return (
-        <motion.div className="group mb-8 w-full px-4 last:mb-0 sm:mb-8 sm:w-[calc(50%-16px)]">
+        <motion.div className="group mb-8 w-full last:mb-0">
             <section className="dark:bg-white/2 overflow-hidden rounded-lg border border-black/5 bg-gray-100 transition hover:bg-gray-200 dark:text-black dark:hover:border-black/10 dark:hover:bg-white/5">
                 <div className="flex flex-col">
                     <Image
