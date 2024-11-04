@@ -13,10 +13,10 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
-      - name: Set up Node.js 🛎
+      - name: Use Node.js 20 🛎
         uses: actions/setup-node@v3
         with:
-          node-version: 'lts/*'
+          node-version: '20.13.1'
           cache: 'npm'
 
       - name: Cache node_modules 📦

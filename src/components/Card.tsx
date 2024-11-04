@@ -1,11 +1,11 @@
 'use client';
 
-import { projectsData } from '@/lib/projects';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
+import { projects } from '@/lib/projects';
 
-type ProjectProps = (typeof projectsData)[number];
+type Props = (typeof projects)[number];
 
 export default function Card({
     title,
@@ -14,7 +14,7 @@ export default function Card({
     image,
     githubUrl,
     appUrl,
-}: ProjectProps) {
+}: Props) {
     return (
         <motion.div className="group mb-8 w-full last:mb-0">
             <section className="dark:bg-white/2 overflow-hidden rounded-lg border border-black/5 bg-gray-100 transition hover:bg-gray-200 dark:text-black dark:hover:border-black/10 dark:hover:bg-white/5">
@@ -35,7 +35,7 @@ export default function Card({
                                 <li key={index}>
                                     <img
                                         alt={tag}
-                                        src={`https://img.shields.io/badge/-${tag}-222.svg?logo=${tag === 'JWT' ? 'JSON%20web%20tokens' : tag}&style=flat`}
+                                        src={`https://img.shields.io/badge/-${tag}-222.svg?logo=${tag}&style=flat`}
                                     />
                                 </li>
                             ))}

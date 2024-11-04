@@ -1,10 +1,10 @@
 'use client';
 
-import Image from 'next/image';
 import { motion } from 'framer-motion';
-import profilePicture from '../../public/profile-picture.jpg';
-import { links } from '@/lib/links';
+import Image from 'next/image';
 import Link from 'next/link';
+import { links } from '@/lib/links';
+import profilePicture from '../../public/profile-picture.jpg';
 
 export default function Home() {
     return (

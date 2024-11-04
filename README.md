@@ -18,7 +18,7 @@ This is a personal portfolio project designed to showcase my personal background
 | --------------- | --------------------------------- |
 | VM              | Amazon EC2                        |
 | Web server      | Nginx                             |
-| Process manager | PM2 (JavaScript runtime Node.js)  |
+| Process manager | PM2 (Process manager for Node.js) |
 | Frontend        | TypeScript, Next.js, Tailwind CSS |
 | CI/CD           | GitHub Actions                    |
 
@@ -36,9 +36,9 @@ This is a personal portfolio project designed to showcase my personal background
 
 ## CI/CD
 
-The project uses GitHub Actions for automated deployment with the following workflow:
+This project utilizes GitHub Actions for automated deployment.
 
-| Jobs             | Description                                                                  |
-| ---------------- | ---------------------------------------------------------------------------- |
-| **Static Tests** | - ESLint for code quality<br>- Prettier for code formatting                  |
-| **Deployment**   | - Automated deployment to EC2 using PM2<br>- Triggered on main branch pushes |
+| Job                     | Description                                                                                                                                                                                  |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Code Quality Checks** | - Husky and lint-staged are used in the local environment to automatically run Prettier and ESLint before each commit.<br>- The deployment job runs only if the code quality checks succeed. |
+| **Deployment**          | - Automated deployment to the EC2 instance using PM2<br>- Triggered on pushes to the main branch                                                                                             |

@@ -1,14 +1,14 @@
 'use client';
 
 import React from 'react';
-import { experiencesData } from '@/lib/experiences';
 import {
     VerticalTimeline,
     VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
+import { experiencesData } from '@/lib/experiences';
 import 'react-vertical-timeline-component/style.min.css';
 
-export default function Experiences() {
+export default function Experience() {
     return (
         <section className="mb-10 w-full scroll-mt-28 sm:w-3/4 lg:w-[53rem]">
             <h2 className="mb-8 text-center text-2xl font-medium">

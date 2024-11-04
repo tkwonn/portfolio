@@ -1,7 +1,6 @@
-import React from 'react';
 import { HiDownload } from 'react-icons/hi';
-import Skills from '@/components/Skills';
-import Experiences from '@/components/Experiences';
+import Experience from '@/components/Experience';
+import Skill from '@/components/Skill';
 
 export default function Resume() {
     return (
@@ -19,8 +18,8 @@ export default function Resume() {
                     </a>
                 </div>
             </section>
-            <Skills />
-            <Experiences />
+            <Skill />
+            <Experience />
         </main>
     );
 }

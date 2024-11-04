@@ -1,6 +1,5 @@
-import React from 'react';
-import { projectsData } from '@/lib/projects';
 import Card from '@/components/Card';
+import { projects } from '@/lib/projects';
 
 export default function Projects() {
     return (
@@ -11,7 +10,7 @@ export default function Projects() {
             >
                 <h2 className="mb-16 text-4xl font-bold">Projects</h2>
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                    {projectsData.map((project, index) => (
+                    {projects.map((project, index) => (
                         <Card key={index} {...project} />
                     ))}
                 </div>
