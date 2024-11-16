@@ -3,31 +3,37 @@ name: deploy to EC2
 on:
   push:
     branches: [main]
-  workflow_dispatch:
 
 jobs:
-  check-lint-and-format:
+  fix:
     runs-on: ubuntu-22.04
 
     steps:
       - name: Check out code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Use Node.js 20 🛎
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '20.13.1'
           cache: 'npm'
+          cache-dependency-path: package-lock.json
 
+      # Only update the cache when dependencies are updated.
       - name: Cache node_modules 📦
-        uses: actions/cache@v3
+        id: cache-nodemodules
+        uses: actions/cache@v4
         with:
-          path: node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('package-lock.json') }}
+          path: |
+            node_modules
+            ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-node_modules-
+            ${{ runner.os }}-node-
+            ${{ runner.os }}-
 
       - name: Install dependencies ‍💻
+        if: steps.cache-nodemodules.outputs.cache-hit != 'true'
         run: npm ci
 
       - name: Run ESLint 👀
@@ -37,12 +43,12 @@ jobs:
         run: npm run check-format
 
   deploy:
-    needs: check-lint-and-format
+    needs: [fix]
     runs-on: ubuntu-22.04
 
     steps:
       - name: Check out code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install PM2
         run: npm install pm2 -g

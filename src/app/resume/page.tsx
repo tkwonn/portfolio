@@ -5,7 +5,7 @@ import Skill from '@/components/Skill';
 export default function Resume() {
     return (
         <main className="mb-20 flex flex-col items-center px-4">
-            <section className="mb-4 max-w-[50rem] text-center">
+            <section className="mb-4 max-w-[70rem] text-center">
                 <h2 className="mb-8 text-4xl font-bold">Resume</h2>
                 <div className="mb-8 flex justify-center">
                     <a

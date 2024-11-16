@@ -1,4 +1,3 @@
-// .eslintrc.js
 module.exports = {
     root: true,
     ignorePatterns: ['**/dist/', '**/lib/', '**/node_modules/', '.eslintrc.js'],

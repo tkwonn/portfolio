@@ -6,12 +6,6 @@
 
 This is a personal portfolio project designed to showcase my personal background, skills, and projects.
 
-## Table of Contents
-
--   [Built with](#built-with)
--   [Server Configuration](#server-configuration)
--   [CI/CD](#cicd)
-
 ## Built with
 
 | **Category**    | **Technology**                    |
@@ -24,15 +18,31 @@ This is a personal portfolio project designed to showcase my personal background
 
 ## Server Configuration
 
-| Category             | Feature                | Description                                                         |
-| -------------------- | ---------------------- | ------------------------------------------------------------------- |
-| **SSL/TLS**          | HTTPS Redirect         | Automatically redirects all HTTP traffic to HTTPS                   |
-|                      | HTTP/2 Support         | Enabled for improved performance                                    |
-|                      | SSL Certificate        | Used Let's Encrypt                                                  |
-| **Security Headers** | X-Frame-Options        | - Prevents clickjacking attacks<br>- Allows same-origin frames only |
-|                      | X-Content-Type-Options | Prevents MIME-type sniffing                                         |
-|                      | X-XSS-Protection       | Blocks XSS attacks                                                  |
-| **Reverse Proxy**    | Proxy Pass             | Forwards requests to Node.js application server (localhost:3000)    |
+**HTTPS Configuration**
+
+-   OpenSSL with LetsEncrypt
+-   Set up a cron job to refetch certificates regularly
+
+<br>
+
+**Security Headers**
+
+| **Header**             | **Description**                                                                |
+| ---------------------- | ------------------------------------------------------------------------------ |
+| X-Frame-Options        | Prevents clickjacking attacks by allowing only same-origin frames              |
+| X-Content-Type-Options | Prevents MIME-type sniffing, ensuring the declared content type is used        |
+| X-XSS-Protection       | Enables built-in browser protection against cross-site scripting (XSS) attacks |
+
+<br>
+
+**Reverse Proxy**
+
+The server is configured to use a reverse proxy that forwards incoming requests to the appropriate backend services.
+
+| **Server name**                                            | **Backend Service**                                              |
+| ---------------------------------------------------------- | ---------------------------------------------------------------- |
+| [taesokkwon.com](https://taesokkwon.com)                   | Node.js application server running on `localhost:3000` (via TCP) |
+| [plantuml.taesokkwon.com](https://plantuml.taesokkwon.com) | PHP application served by PHP-FPM (via FastCGI)                  |
 
 ## CI/CD
 
