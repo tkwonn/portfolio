@@ -71,14 +71,14 @@ jobs:
             "commands": [
               "set -e",
               "if [ -d /home/ubuntu/web/portfolio ]; then",
-              "  pm2 stop all || true",
+              "  pm2 stop portfolio || true",
               "  sudo rm -rf /home/ubuntu/web/portfolio",
               "fi",
               
               "cd /home/ubuntu/web",
               "git clone --branch $GITHUB_BRANCH https://github.com/tkwonn/portfolio.git portfolio",
               
-              "cd portfolio",
+              "cd /home/ubuntu/web/portfolio",
               "npm ci",
               "npm run build",
               "pm2 start npm --name portfolio -- start",
