@@ -89,13 +89,14 @@ jobs:
             --comment "Deploy application" \
             --parameters "$COMMANDS_JSON" \
             --region "${{ env.AWS_REGION }}" \
+            --timeout-seconds 3600 \
             --query "Command.CommandId" \
             --output text)
 
           echo "SSM Command ID: $COMMAND_ID"
 
           # Poll for command status
-          MAX_ATTEMPTS=36
+          MAX_ATTEMPTS=60
           SLEEP_INTERVAL=10
 
           for (( i=0; i<$MAX_ATTEMPTS; i++ ))
