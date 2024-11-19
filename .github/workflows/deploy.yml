@@ -79,6 +79,7 @@ jobs:
               "git clone --branch ${{ env.GITHUB_BRANCH }} https://github.com/tkwonn/portfolio.git portfolio",
 
               "cd /home/ubuntu/web/portfolio",
+              "rm -rf .next",
               "npm ci",
               "npm run build",
               "pm2 start npm --name portfolio -- start",
