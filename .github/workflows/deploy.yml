@@ -70,18 +70,13 @@ jobs:
           {
             "commands": [
               "set -e",
-              "if [ -d /home/ubuntu/web/portfolio ]; then",
-              "  cd /home/ubuntu/web/portfolio",
-              "  pm2 stop portfolio || true",
-              "  cd ..",
-              "  sudo rm -rf /home/ubuntu/web/portfolio",
-              "fi",
-              "cd /home/ubuntu/web",
-              "git clone --branch main https://github.com/tkwonn/portfolio.git portfolio",
-              "cd /home/ubuntu/web/portfolio",
+              "cd /home/ubuntu/portfolio",
+              "git reset --hard",
+              "git pull origin $GITHUB_BRANCH",
               "npm ci",
               "npm run build",
-              "pm2 start npm --name portfolio -- start"
+              "pm2 restart portfolio || pm2 start npm --name portfolio -- start",
+              "pm2 save"
             ]
           }
           EOF
