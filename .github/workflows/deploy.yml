@@ -66,22 +66,22 @@ jobs:
 
       - name: Deploy using AWS SSM 🔨
         run: |
-          commands_json=$(cat <<EOF
+          COMMANDS_JSON=$(cat << 'EOF'
           {
             "commands": [
               "set -e",
               "if [ -d /home/ubuntu/web/portfolio ]; then",
-              "  cd /home/ubuntu/web/portfolio,
-              "  pm2 stop all || true",
+              "  cd /home/ubuntu/web/portfolio",
+              "  pm2 stop portfolio || true",
               "  cd ..",
               "  sudo rm -rf /home/ubuntu/web/portfolio",
               "fi",
               "cd /home/ubuntu/web",
-              "git clone --branch ${{ env.GITHUB_BRANCH }} git@github.com:tkwonn/portfolio.git
+              "git clone --branch main git@github.com:tkwonn/portfolio.git portfolio",
               "cd /home/ubuntu/web/portfolio",
               "npm ci",
               "npm run build",
-              "pm2 start npm --name 'portfolio' -- start"
+              "pm2 start npm --name portfolio -- start"
             ]
           }
           EOF
@@ -91,5 +91,5 @@ jobs:
             --instance-ids "${{ env.EC2_INSTANCE_ID }}" \
             --document-name "AWS-RunShellScript" \
             --comment "Deploy application" \
-            --parameters "$commands_json" \
-            --region ${{ env.AWS_REGION }}
+            --parameters "$COMMANDS_JSON" \
+            --region "${{ env.AWS_REGION }}"
