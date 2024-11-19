@@ -71,21 +71,20 @@ jobs:
             "commands": [
               "set -e",
               "if [ -d /home/ubuntu/web/portfolio ]; then",
-              "  pm2 stop portfolio || true",
-              "  pm2 delete portfolio || true",
+              "  sudo -u ubuntu pm2 stop portfolio || true",
               "  sudo rm -rf /home/ubuntu/web/portfolio",
               "fi",
 
               "cd /home/ubuntu/web",
-              "git clone --branch ${{ env.GITHUB_BRANCH }} https://github.com/tkwonn/portfolio.git portfolio",
-              "sudo chown -R ubuntu:ubuntu /home/ubuntu/web/portfolio",
+              "sudo -u ubuntu git clone --branch $GITHUB_BRANCH https://github.com/tkwonn/portfolio.git portfolio",
 
               "cd /home/ubuntu/web/portfolio",
-              "rm -rf .next",
-              "npm ci",
-              "npm run build",
-              "pm2 start npm --name portfolio -- start",
-              "pm2 save"
+              "sudo -u ubuntu npm ci",
+              "sudo -u ubuntu npm run build",
+              "sudo -u ubuntu pm2 start npm --name portfolio -- start",
+              "sudo -u ubuntu pm2 save",
+
+              "sudo chown -R ubuntu:ubuntu /home/ubuntu/web/portfolio"
             ]
           }
           EOF
