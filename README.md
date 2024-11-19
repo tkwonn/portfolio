@@ -6,6 +6,8 @@
 
 This is a personal portfolio project designed to showcase my personal background, skills, and projects.
 
+<br>
+
 ## Built with
 
 | **Category**    | **Technology**                    |
@@ -15,6 +17,8 @@ This is a personal portfolio project designed to showcase my personal background
 | Process manager | PM2 (Process manager for Node.js) |
 | Frontend        | TypeScript, Next.js, Tailwind CSS |
 | CI/CD           | GitHub Actions                    |
+
+<br>
 
 ## Server Configuration
 
@@ -43,6 +47,8 @@ The server is configured to use a reverse proxy that forwards incoming requests 
 | ---------------------------------------------------------- | ---------------------------------------------------------------- |
 | [taesokkwon.com](https://taesokkwon.com)                   | Node.js application server running on `localhost:3000` (via TCP) |
 | [plantuml.taesokkwon.com](https://plantuml.taesokkwon.com) | PHP application served by PHP-FPM (via FastCGI)                  |
+
+<br>
 
 ## CI/CD
 
