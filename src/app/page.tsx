@@ -60,7 +60,7 @@ export default function Home() {
                             />
                         </Link>
                     </div>
-                    <p className="py-4 font-bold">Hi</p>
+                    <p className="py-4 font-bold"></p>
                 </motion.h1>
 
                 <div className="flex flex-wrap justify-center gap-6 py-4">
