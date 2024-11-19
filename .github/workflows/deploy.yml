@@ -82,6 +82,7 @@ jobs:
           EOF
           )
 
+          # Send SSM Command
           COMMAND_ID=$(aws ssm send-command \
             --instance-ids "${{ env.EC2_INSTANCE_ID }}" \
             --document-name "AWS-RunShellScript" \
@@ -95,16 +96,29 @@ jobs:
           aws ssm wait command-executed \
             --instance-id "${{ env.EC2_INSTANCE_ID }}" \
             --command-id "$COMMAND_ID" \
-            --region "${{ env.AWS_REGION }}"
+            --region "${{ env.AWS_REGION }}" \
+            --cli-read-timeout 900 \
+            --cli-connect-timeout 900
 
-          # Check the command status
-          STATUS=$(aws ssm list-command-invocations \
+          # Retrieve and display logs
+          OUTPUT=$(aws ssm get-command-invocation \
+            --instance-id "${{ env.EC2_INSTANCE_ID }}" \
             --command-id "$COMMAND_ID" \
-            --details \
-            --query "CommandInvocations[0].Status" \
+            --query "StandardOutputContent" \
             --output text)
+            
+          echo "SSM Output:"
+          echo "$OUTPUT"
 
-          if [ "$STATUS" != "Success" ]; then
-            echo "SSM Command failed with status: $STATUS"
+          # Retrieve error logs if any
+          ERROR=$(aws ssm get-command-invocation \
+            --instance-id "${{ env.EC2_INSTANCE_ID }}" \
+            --command-id "$COMMAND_ID" \
+            --query "StandardErrorContent" \
+            --output text)
+            
+          if [ "$ERROR" != "null" ]; then
+            echo "SSM Errors:"
+            echo "$ERROR"
             exit 1
           fi
