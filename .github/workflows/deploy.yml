@@ -70,7 +70,7 @@ jobs:
           {
             "commands": [
               "set -e",
-              "cd /home/ubuntu/portfolio",
+              "cd /home/ubuntu/web/portfolio",
               "git reset --hard",
               "git pull origin $GITHUB_BRANCH",
               "npm ci",
@@ -82,9 +82,29 @@ jobs:
           EOF
           )
 
-          aws ssm send-command \
+          COMMAND_ID=$(aws ssm send-command \
             --instance-ids "${{ env.EC2_INSTANCE_ID }}" \
             --document-name "AWS-RunShellScript" \
             --comment "Deploy application" \
             --parameters "$COMMANDS_JSON" \
+            --region "${{ env.AWS_REGION }}" \
+            --query "Command.CommandId" \
+            --output text)
+
+          # Wait for the command to complete
+          aws ssm wait command-executed \
+            --instance-id "${{ env.EC2_INSTANCE_ID }}" \
+            --command-id "$COMMAND_ID" \
             --region "${{ env.AWS_REGION }}"
+
+          # Check the command status
+          STATUS=$(aws ssm list-command-invocations \
+            --command-id "$COMMAND_ID" \
+            --details \
+            --query "CommandInvocations[0].Status" \
+            --output text)
+
+          if [ "$STATUS" != "Success" ]; then
+            echo "SSM Command failed with status: $STATUS"
+            exit 1
+          fi
