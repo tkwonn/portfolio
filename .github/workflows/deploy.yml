@@ -78,6 +78,7 @@ jobs:
 
               "cd /home/ubuntu/web",
               "git clone --branch ${{ env.GITHUB_BRANCH }} https://github.com/tkwonn/portfolio.git portfolio",
+              "sudo chown -R ubuntu:ubuntu /home/ubuntu/web/portfolio",
 
               "cd /home/ubuntu/web/portfolio",
               "rm -rf .next",
