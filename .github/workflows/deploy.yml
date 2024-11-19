@@ -18,6 +18,7 @@ jobs:
           node-version: '20.13.1'
           cache: 'npm'
 
+      # Only update the cache when dependencies are updated.
       - name: Cache node_modules 📦
         id: cache-nodemodules
         uses: actions/cache@v4
@@ -53,9 +54,6 @@ jobs:
       SESSION_NAME: portfolio-${{ github.run_id }}-${{ github.run_attempt }}
       EC2_INSTANCE_ID: "i-0787bc1994b8b31e1"
       AWS_REGION: "us-west-2"
-      WEB_DIR: "/home/ubuntu/web"
-      APP_DIR: "/home/ubuntu/web/portfolio"
-      GITHUB_REPO: "git@github.com:tkwonn/portfolio.git"
       GITHUB_BRANCH: "${{ github.ref_name }}"
 
     steps:
@@ -68,20 +66,24 @@ jobs:
 
       - name: Deploy using AWS SSM 🔨
         run: |
-          DEPLOY_COMMANDS=$(cat << EOF
-            set -e
-            if [ -d "${{ env.APP_DIR }}" ]; then
-              cd "${{ env.APP_DIR }}"
-              pm2 stop all || true
-              cd ..
-              rm -rf "${{ env.APP_DIR }}"
-            fi
-            cd "${{ env.WEB_DIR }}"
-            git clone --branch "${{ env.GITHUB_BRANCH }}" "${{ env.GITHUB_REPO }}" "$(basename "${{ env.APP_DIR }}")"
-            cd "${{ env.APP_DIR }}"
-            npm ci
-            npm run build
-            pm2 start npm --name 'portfolio' -- start
+          commands_json=$(cat <<EOF
+          {
+            "commands": [
+              "set -e",
+              "if [ -d /home/ubuntu/web/portfolio ]; then",
+              "  cd /home/ubuntu/web/portfolio,
+              "  pm2 stop all || true",
+              "  cd ..",
+              "  sudo rm -rf /home/ubuntu/web/portfolio",
+              "fi",
+              "cd /home/ubuntu/web",
+              "git clone --branch ${{ env.GITHUB_BRANCH }} git@github.com:tkwonn/portfolio.git
+              "cd /home/ubuntu/web/portfolio",
+              "npm ci",
+              "npm run build",
+              "pm2 start npm --name 'portfolio' -- start"
+            ]
+          }
           EOF
           )
 
@@ -89,5 +91,5 @@ jobs:
             --instance-ids "${{ env.EC2_INSTANCE_ID }}" \
             --document-name "AWS-RunShellScript" \
             --comment "Deploy application" \
-            --parameters commands="sudo -Hiu ubuntu bash -c '$DEPLOY_COMMANDS'" \
-            --region "${{ env.AWS_REGION }}"
+            --parameters "$commands_json" \
+            --region ${{ env.AWS_REGION }}
