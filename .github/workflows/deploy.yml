@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  fix:
+  build:
     runs-on: ubuntu-22.04
 
     steps:
@@ -17,7 +17,6 @@ jobs:
         with:
           node-version: '20.13.1'
           cache: 'npm'
-          cache-dependency-path: package-lock.json
 
       # Only update the cache when dependencies are updated.
       - name: Cache node_modules 📦
@@ -43,24 +42,51 @@ jobs:
         run: npm run check-format
 
   deploy:
-    needs: [fix]
+    needs: [build]
     runs-on: ubuntu-22.04
 
+    permissions:
+      id-token: write
+      contents: read
+
+    env:
+      ROLE_ARN: arn:aws:iam::${{ secrets.AWS_ID }}:role/${{ secrets.ROLE_NAME }}
+      SESSION_NAME: portfolio-${{ github.run_id }}-${{ github.run_attempt }}
+      EC2_INSTANCE_ID: "i-0787bc1994b8b31e1"
+      AWS_REGION: "us-west-2"
+      APP_DIR: "/home/ubuntu/web/portfolio"
+      GITHUB_REPO: "git@github.com:tkwonn/portfolio.git"
+      GITHUB_BRANCH: "${{ github.ref_name }}"
+
     steps:
-      - name: Check out code
-        uses: actions/checkout@v4
-
-      - name: Install PM2
-        run: npm install pm2 -g
-
-      - name: Set up SSH key
-        uses: shimataro/ssh-key-action@v2
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
         with:
-          key: ${{ secrets.EC2_SSH_KEY }}
-          known_hosts: ${{ secrets.EC2_HOST }}
+          role-to-assume: ${{ env.ROLE_ARN }}
+          role-session-name: ${{ env.SESSION_NAME }}
+          aws-region: ${{ env.AWS_REGION }}
 
-      - name: Deploy to EC2 server 🔨
-        env:
-          EC2_HOST: ${{ secrets.EC2_HOST }}
+      - name: Deploy using AWS SSM 🔨
         run: |
-          pm2 deploy ecosystem.config.js production --force
+          aws ssm send-command \
+            --instance-ids "${{ env.EC2_INSTANCE_ID }}" \
+            --document-name "AWS-RunShellScript" \
+            --comment "Deploy application" \
+            --parameters commands="
+              set -e
+              if [ -d ${{ env.APP_DIR }} ]; then
+                cd ${{ env.APP_DIR }}
+                pm2 stop all || true
+                cd ..
+                sudo rm -rf ${{ env.APP_DIR }}
+              fi
+              
+              cd /home/ubuntu/web
+              git clone --branch ${{ env.GITHUB_BRANCH }} ${{ env.GITHUB_REPO }} $(basename ${{ env.APP_DIR }})
+
+              cd ${{ env.APP_DIR }}
+              npm ci
+              npm run build
+              pm2 start npm --name 'portfolio' -- start
+            " \
+            --region ${{ env.AWS_REGION }}
