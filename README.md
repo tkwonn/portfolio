@@ -51,8 +51,6 @@ The server is configured to use a reverse proxy that forwards incoming requests 
 
 ## CI/CD
 
-This project utilizes GitHub Actions for automated deployment, ensuring a streamlined and secure workflow.
-
 | Job                     | Description                                                                                                                                                                                  |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Code Quality Checks** | - Husky and lint-staged are used in the local environment to automatically run Prettier and ESLint before each commit.<br>- The deployment job runs only if the code quality checks succeed. |

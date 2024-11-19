@@ -12,8 +12,7 @@ export const languages: readonly Skill[] = [
         name: 'Type/JavaScript',
         years: '3 yrs',
         proficiency: [
-            '-  Has experience with Web APIs such as DOM, Fetch, Web Storage, and Web Socket API.',
-            '- Understands TypeScript\'s core features, including strict typing, generics, and type guards (?)',
+            '- Has experience with Web APIs such as DOM, Fetch, Web Storage, and Web Socket API.',
         ]
     },
     {
@@ -29,7 +28,6 @@ export const languages: readonly Skill[] = [
         name: 'Java',
         years: '3 yrs',
         proficiency: [
-            '- Understands OOP concepts, including inheritance, polymorphism, and encapsulation(?).',
             '- Has experience developing applications using Android Studio with Kotlin.'
         ]
     },
@@ -107,9 +105,16 @@ export const misc: readonly Skill[] = [
         name: 'Git',
         years: '3 yrs',
         proficiency: [
-            '- Can use necessary commands for local development and syncing with remote repositories(?).',
+            '- Can use essential commands for version control, branching, and managing changes in local and remote repositories.',
             '- Has experience creating issues, pull requests, and conducting code reviews in team collaboration.',
-            '- Able to set up CI/CD using GitHub Actions(?).'
+        ]
+    },
+    {
+        name: 'GitHub Actions',
+        years: '~ 1 yr',
+        proficiency: [
+            '- Can set up CI pipelines to run tests and static analysis.',
+            '- Can deploy applications to AWS EC2 securely using OpenID Connect.',
         ]
     },
     {
@@ -121,7 +126,7 @@ export const misc: readonly Skill[] = [
     },
     {
         name: 'Nginx',
-        years: '~ 1 yrs',
+        years: '~ 1 yr',
         proficiency: [
             '- Understands basic syntax such as directives and contexts, and can edit configuration files to set up reverse proxy, SSL certificates, and security headers.',
             '- Able to configure connections to web applications using PHP-FPM and TCP sockets.'
@@ -129,7 +134,7 @@ export const misc: readonly Skill[] = [
     },
     {
         name: 'AWS',
-        years: '~ 1 yrs',
+        years: '~ 1 yr',
         proficiency: [
             'Can create EC2 instances, configure S3 buckets, set up RDS, and configure IAM roles.',
         ]
