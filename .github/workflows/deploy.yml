@@ -72,6 +72,7 @@ jobs:
               "set -e",
               "if [ -d /home/ubuntu/web/portfolio ]; then",
               "  pm2 stop portfolio || true",
+              "  pm2 delete portfolio || true",
               "  sudo rm -rf /home/ubuntu/web/portfolio",
               "fi",
 
