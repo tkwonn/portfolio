@@ -92,33 +92,45 @@ jobs:
             --query "Command.CommandId" \
             --output text)
 
-          # Wait for the command to complete
-          aws ssm wait command-executed \
-            --instance-id "${{ env.EC2_INSTANCE_ID }}" \
-            --command-id "$COMMAND_ID" \
-            --region "${{ env.AWS_REGION }}" \
-            --cli-read-timeout 900 \
-            --cli-connect-timeout 900
+          echo "SSM Command ID: $COMMAND_ID"
 
-          # Retrieve and display logs
-          OUTPUT=$(aws ssm get-command-invocation \
-            --instance-id "${{ env.EC2_INSTANCE_ID }}" \
-            --command-id "$COMMAND_ID" \
-            --query "StandardOutputContent" \
-            --output text)
-            
-          echo "SSM Output:"
-          echo "$OUTPUT"
+          # Poll for command status
+          MAX_ATTEMPTS=36
+          SLEEP_INTERVAL=10
 
-          # Retrieve error logs if any
-          ERROR=$(aws ssm get-command-invocation \
-            --instance-id "${{ env.EC2_INSTANCE_ID }}" \
-            --command-id "$COMMAND_ID" \
-            --query "StandardErrorContent" \
-            --output text)
-            
-          if [ "$ERROR" != "null" ]; then
-            echo "SSM Errors:"
-            echo "$ERROR"
+          for (( i=0; i<$MAX_ATTEMPTS; i++ ))
+          do
+            STATUS=$(aws ssm list-command-invocations \
+              --command-id "$COMMAND_ID" \
+              --details \
+              --query "CommandInvocations[0].Status" \
+              --output text)
+
+            echo "Current SSM command status: $STATUS"
+
+            # Retrieve logs progressively
+            OUTPUT=$(aws ssm get-command-invocation \
+              --instance-id "${{ env.EC2_INSTANCE_ID }}" \
+              --command-id "$COMMAND_ID" \
+              --query "StandardOutputContent" \
+              --output text || true)
+
+            if [ -n "$OUTPUT" ]; then
+              echo "$OUTPUT"
+            fi
+
+            if [ "$STATUS" == "Success" ]; then
+              echo "SSM command succeeded!"
+              break
+            elif [ "$STATUS" == "Failed" ]; then
+              echo "SSM command failed!"
+              exit 1
+            fi
+
+            sleep $SLEEP_INTERVAL
+          done
+
+          if [ "$STATUS" != "Success" ]; then
+            echo "SSM command did not complete within expected time."
             exit 1
           fi
