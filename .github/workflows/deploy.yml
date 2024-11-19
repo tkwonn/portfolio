@@ -77,7 +77,7 @@ jobs:
               "  sudo rm -rf /home/ubuntu/web/portfolio",
               "fi",
               "cd /home/ubuntu/web",
-              "git clone --branch main git@github.com:tkwonn/portfolio.git portfolio",
+              "git clone --branch main https://github.com/tkwonn/portfolio.git portfolio",
               "cd /home/ubuntu/web/portfolio",
               "npm ci",
               "npm run build",
