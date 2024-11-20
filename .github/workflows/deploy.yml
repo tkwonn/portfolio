@@ -70,9 +70,9 @@ jobs:
           {
             "commands": [
               "set -e",
+              "cd /home/ubuntu/web/portfolio",
               "git fetch origin $GITHUB_BRANCH",
               "git reset --hard origin/$GITHUB_BRANCH",
-              "cd /home/ubuntu/web/portfolio",
               "sudo -u ubuntu npm ci",
               "sudo -u ubuntu npm run build",
               "pm2 start npm --name portfolio -- start",
