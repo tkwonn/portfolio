@@ -70,13 +70,13 @@ jobs:
           {
             "commands": [
               "set -e",
-              ”git fetch origin $GITHUB_BRANCH”,
+              "git fetch origin $GITHUB_BRANCH",
               "git reset --hard origin/$GITHUB_BRANCH",
               "cd /home/ubuntu/web/portfolio",
               "sudo -u ubuntu npm ci",
               "sudo -u ubuntu npm run build",
               "pm2 start npm --name portfolio -- start",
-              "pm2 restart portfolio || sudo -u ubuntu pm2 start npm --name portfolio -- start",
+              "pm2 restart portfolio || sudo -u ubuntu pm2 start npm --name portfolio -- start"
             ]
           }
           EOF
