@@ -70,14 +70,14 @@ jobs:
           {
             "commands": [
               "set -e",
-              "sudo -u ubuntu bash -c 'set -e && \\
-                cd /home/ubuntu/web/portfolio && \\
-                git fetch origin $GITHUB_BRANCH && \\
-                git reset --hard origin/$GITHUB_BRANCH && \\
-                npm ci && \\
-                npm run build && \\
-                pm2 start npm --name portfolio -- start && \\
-                pm2 restart portfolio || pm2 start npm --name portfolio -- start'"
+              "sudo -u ubuntu bash -c \\\"set -e && \\\\",
+              "  cd /home/ubuntu/web/portfolio && \\\\",
+              "  git fetch origin main && \\\\",
+              "  git reset --hard origin/main && \\\\",
+              "  npm ci && \\\\",
+              "  npm run build && \\\\",
+              "  pm2 start npm --name portfolio -- start && \\\\",
+              "  pm2 restart portfolio || pm2 start npm --name portfolio -- start\\\""
             ]
           }
           EOF
@@ -97,7 +97,7 @@ jobs:
           echo "SSM Command ID: $COMMAND_ID"
 
           # Poll for command status
-          MAX_ATTEMPTS=70
+          MAX_ATTEMPTS=0
           SLEEP_INTERVAL=10
 
           for (( i=0; i<$MAX_ATTEMPTS; i++ ))
