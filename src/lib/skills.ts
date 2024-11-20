@@ -85,7 +85,7 @@ export const databases: readonly Skill[] = [
         ]
     },
     {
-        name: 'Google Cloud Firestore / MongoDB',
+        name: 'Cloud Firestore',
         years: '2 yrs',
         proficiency: [
             'Can perform CRUD operations on data by referring to the official documentation.',
@@ -114,7 +114,7 @@ export const misc: readonly Skill[] = [
         years: '~ 1 yr',
         proficiency: [
             '- Can set up CI pipelines to run tests and static analysis.',
-            '- Can deploy applications to AWS EC2 securely using OpenID Connect.',
+            '- Can deploy applications to cloud services using OpenID Connect.',
         ]
     },
     {
@@ -136,7 +136,11 @@ export const misc: readonly Skill[] = [
         name: 'AWS',
         years: '~ 1 yr',
         proficiency: [
-            'Can create EC2 instances, configure S3 buckets, set up RDS, and configure IAM roles.',
+            // 'VPC: ',
+            'EC2: Can set up Nginx servers and allocate Elastic IPs.',
+            // 'S3: ',
+            // 'RDS: ',
+            'IAM: Can set up roles and custom policies to control access.',
         ]
     },
     // {

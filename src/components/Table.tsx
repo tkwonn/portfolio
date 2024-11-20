@@ -12,16 +12,16 @@ export default function Table({ title, skills }: Props) {
                 {title}
             </h3>
             <div className="overflow-x-auto">
-                <table className="min-w-full border border-gray-300 bg-white dark:border-white dark:bg-gray-800">
+                <table className="w-full border border-gray-300 bg-white dark:border-white dark:bg-gray-800">
                     <thead>
                         <tr className="border border-gray-300 text-xs sm:text-base dark:border-white">
-                            <th className="bg-gray-100 px-2 py-2 sm:px-4 dark:bg-gray-400">
+                            <th className="w-40 bg-gray-100 px-2 py-2 sm:px-4 dark:bg-gray-400">
                                 Technology
                             </th>
-                            <th className="w-20 bg-gray-100 px-2 py-2 sm:w-36 sm:px-4 dark:bg-gray-400">
+                            <th className="w-10 bg-gray-100 px-2 py-2 sm:w-36 sm:px-4 dark:bg-gray-400">
                                 Years
                             </th>
-                            <th className="bg-gray-100 px-2 py-2 sm:px-4 dark:bg-gray-400">
+                            <th className="w-50 bg-gray-100 px-2 py-2 sm:px-4 dark:bg-gray-400">
                                 Level of experience
                             </th>
                         </tr>
