@@ -70,6 +70,7 @@ jobs:
           {
             "commands": [
               "set -e",
+              "sudo chown -R ubuntu:ubuntu /home/ubuntu/web/portfolio",
               "sudo -u ubuntu bash -c 'set -e; cd /home/ubuntu/web/portfolio && \
                 git fetch origin $GITHUB_BRANCH && \
                 git reset --hard origin/$GITHUB_BRANCH && \
