@@ -70,14 +70,14 @@ jobs:
           {
             "commands": [
               "set -e",
-              "sudo -u ubuntu bash -c \\\"set -e && \\\\",
-              "  cd /home/ubuntu/web/portfolio && \\\\",
-              "  git fetch origin main && \\\\",
-              "  git reset --hard origin/main && \\\\",
-              "  npm ci && \\\\",
-              "  npm run build && \\\\",
-              "  pm2 start npm --name portfolio -- start && \\\\",
-              "  pm2 restart portfolio || pm2 start npm --name portfolio -- start\\\""
+              "sudo su - ubuntu -c 'bash -c \"set -e && \\",
+              "cd /home/ubuntu/web/portfolio && \\",
+              "git fetch origin main && \\",
+              "git reset --hard origin/main && \\",
+              "npm ci && \\",
+              "npm run build && \\",
+              "pm2 start npm --name portfolio -- start || pm2 restart portfolio && \\",
+              "pm2 save\"'"
             ]
           }
           EOF
