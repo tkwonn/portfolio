@@ -42,31 +42,36 @@ This is a personal portfolio project designed to showcase my personal background
 
 The server is configured to use a reverse proxy that forwards incoming requests to the appropriate backend services.
 
-| **Server name**                                            | **Backend Service**                                              |
-| ---------------------------------------------------------- | ---------------------------------------------------------------- |
-| [taesokkwon.com](https://taesokkwon.com)                   | Node.js application server running on `localhost:3000` (via TCP) |
-| [plantuml.taesokkwon.com](https://plantuml.taesokkwon.com) | PHP application served by PHP-FPM (via FastCGI)                  |
+| **Server name**                                                    | **Backend Service**                                              |
+| ------------------------------------------------------------------ | ---------------------------------------------------------------- |
+| [taesokkwon.com](https://taesokkwon.com)                           | Node.js application server running on `localhost:3000` (via TCP) |
+| [plantuml.taesokkwon.com](https://plantuml.taesokkwon.com)         | PHP application served by PHP-FPM (via FastCGI)                  |
+| [text-snippet.taesokkwon.com](https://text-snippet.taesokkwon.com) | PHP application served by PHP-FPM (via FastCGI)                  |
 
 ## CI/CD
 
-| Job                     | Description                                                                                                                                                                                  |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Code Quality Checks** | - Husky and lint-staged are used in the local environment to automatically run Prettier and ESLint before each commit.<br>- The deployment job runs only if the code quality checks succeed. |
-| **Deployment**          | - Automated deployment to the EC2 instance using PM2<br>- Triggered on pushes to the main branch                                                                                             |
+### CI
 
-### What I focused on
+**Dependency Caching**
 
-1. **OpenID Connect for Secure AWS Authentication**
+Utilizes npm cache to speed up dependency installation by reusing previously installed modules.
 
-    - Used OpenID Connect to securely assume an IAM role, eliminating the need to store long-term AWS credentials as secrets.
-    - The workflow dynamically obtains a short-lived token to access AWS resources, adhering to best security practices.
-    - Ensures secure cloud role operations by granting only the minimal necessary permissions (avoiding FullAccess roles) and verifying that access is restricted to the intended repository.
+**Code Quality Check**
 
-2. **AWS Systems Manager (SSM)**
+Confirms that Prettier and ESLint checks, which are set up locally using Husky and lint-staged, were successfully completed.
 
-    - Used SSM to execute commands on the EC2 instance after authentication, removing the need for direct SSH access or changes to security groups.
-    - Key operations include:
-        - Pulling the latest code.
-        - Installing dependencies with `npm ci`.
-        - Building the application with `npm run build`.
-        - Managing the application with PM2 (start/restart/save).
+### CD
+
+**OpenID Connect for Secure AWS Authentication**
+
+-   Uses OpenID Connect to securely assume an IAM role with short-lived tokens, eliminating the need to manage long-term AWS credentials as secrets.
+-   Ensures secure cloud role operations by granting only the minimal necessary permissions (avoiding FullAccess roles) and verifying that access is restricted to the intended repository.
+
+**AWS Systems Manager (SSM)**
+
+-   Used SSM to execute commands on the EC2 instance after authentication, removing the need for direct SSH access or changes to security groups.
+-   Key operations include:
+    -   Pulling the latest code.
+    -   Installing dependencies with `npm ci`.
+    -   Building the application with `npm run build`.
+    -   Managing the application with PM2 (start/restart/save).
