@@ -3,23 +3,22 @@ name: deploy to EC2
 on:
   push:
     branches: [main]
+    paths:
+      - 'src/**'
 
 jobs:
-  ####### Build(CI) #######
-  build:
+  ####### CI #######
+  fix:
     runs-on: ubuntu-22.04
-    strategy:
-      matrix:
-        node-version: [20.13.1]
 
     steps:
       - name: Check out code
         uses: actions/checkout@v4
 
-      - name: Use Node.js ${{ matrix.node-version }} 🛎
+      - name: Use Node.js 20.13.1 🛎
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 20.13.1
           cache: 'npm'
 
       - name: Cache node modules 📦
@@ -50,9 +49,9 @@ jobs:
       - name: Run Prettier Check 👀
         run: npm run check-format
 
-  ####### Deploy(CD) #######
+  ####### CD #######
   deploy:
-    needs: build
+    needs: fix
     runs-on: ubuntu-22.04
 
     permissions:
@@ -64,7 +63,6 @@ jobs:
       SESSION_NAME: deploy-${{ github.run_id }}-${{ github.run_attempt }}
       EC2_INSTANCE_ID: "i-0787bc1994b8b31e1"
       AWS_REGION: "us-west-2"
-      S3_BUCKET: ${{ secrets.S3_BUCKET }}
       GITHUB_BRANCH: "${{ github.ref_name }}"
 
     steps:
@@ -81,8 +79,8 @@ jobs:
           {
             "commands": [
               "set -e",
-              "sudo chown -R ubuntu:ubuntu /home/ubuntu/web/portfolio",
-              "sudo -u ubuntu bash -c 'set -e; cd /home/ubuntu/web/portfolio && \
+              "sudo chown -R ubuntu:ubuntu /home/ubuntu/web/plantuml",
+              "sudo -u ubuntu bash -c 'set -e; cd /home/ubuntu/web/plantuml && \
                 git fetch origin $GITHUB_BRANCH && \
                 git reset --hard origin/$GITHUB_BRANCH && \
                 npm ci && \
