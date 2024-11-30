@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { links } from '@/lib/links';
-import profilePicture from '../../public/profile-picture.jpg';
+import profilePicture from '../../public/assets/img/profile-picture.jpg';
 
 export default function Home() {
     return (
@@ -44,6 +44,7 @@ export default function Home() {
                             target="_blank"
                             rel="noopener"
                         >
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
                                 alt="LinkedIn"
                                 src="https://img.shields.io/badge/LinkedIn-Taesok Kwon-blue?style=flat-square&logo=linkedin"
@@ -54,6 +55,7 @@ export default function Home() {
                             target="_blank"
                             rel="noopener"
                         >
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
                                 alt="GitHub"
                                 src="https://img.shields.io/badge/GitHub-tkwonn-black?style=flat-square&logo=github"

@@ -1,4 +1,4 @@
-import { Skill } from '@/type/Skill';
+import { Skill } from '@/type';
 
 type Props = {
     title: string;

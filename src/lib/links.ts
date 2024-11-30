@@ -12,7 +12,7 @@ export const links = [
     },
     {
         name: 'Projects',
-        path: '/projects',
+        path: '/projects/web',
         description:
             'List of my projects with summaries, live URLs, and GitHub links.',
     },

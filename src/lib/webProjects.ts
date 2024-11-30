@@ -1,52 +1,44 @@
-import plantuml from '../../public/img/plantuml.png';
-import video from '../../public/img/video.png';
-import portfolio from '../../public/img/portfolio.png';
-import sketch from '../../public/img/sketch.png';
-import connect4 from '../../public/img/connect4.png';
-import clickEmpire from '../../public/img/click-empire.png';
+import { Project } from '@/type';
+import clickEmpire from '../../public/assets/img/click-empire.png';
+import connect4 from '../../public/assets/img/connect4.png';
+import plantuml from '../../public/assets/img/plantuml.png';
+import portfolio from '../../public/assets/img/portfolio.png';
+import sketch from '../../public/assets/img/sketch.png';
+import video from '../../public/assets/img/video.png';
 
-export const projects = [
+export const projects: Project[] = [
     // {
-    //     image: video,
-    //     title: 'MyFitnessTracker',
+    //     image: plantuml,
+    //     title: 'Online Image Hosting Service',
     //     description:
     //         'FFMPEGライブラリを活用し、ユーザーがアップロードした動画を圧縮、変換、編集できるデスクトップアプリを開発しました。OSにフルアクセス可能なNode.js環境を提供するElectronのメインプロセスとHTMLのDOMにアクセス可能なレンダラープロセス間の通信によって、効率的なイベント処理を実現しています。',
-    //     tags: ['TypeScript', 'Laravel', 'Tailwind CSS', 'Amazon EC2', 'Amazon S3', 'Amazon RDS'],
+    //     tags: ['JavaScript', 'PHP', 'Amazon EC2', 'Amazon RDS'],
     //     githubUrl: 'https://github.com/tkwonn/video-compressor',
     //     appUrl: 'https://github.com/tkwonn/video-compressor/releases',
     // },
     // {
-    //     image: video,
-    //     title: 'Text Snippets',
+    //     image: plantuml,
+    //     title: 'Text Snippet Sharing Service',
     //     description:
     //         'FFMPEGライブラリを活用し、ユーザーがアップロードした動画を圧縮、変換、編集できるデスクトップアプリを開発しました。OSにフルアクセス可能なNode.js環境を提供するElectronのメインプロセスとHTMLのDOMにアクセス可能なレンダラープロセス間の通信によって、効率的なイベント処理を実現しています。',
-    //     tags: ['TypeScript', 'PHP', 'TailwindCSS', 'Amazon EC2', 'Amazon RDS'],
+    //     tags: ['JavaScript', 'PHP', 'MySQL', 'Amazon EC2'],
     //     githubUrl: 'https://github.com/tkwonn/video-compressor',
     //     appUrl: 'https://github.com/tkwonn/video-compressor/releases',
     // },
     {
         image: plantuml,
-        title: 'PlantUML',
+        title: 'PlantUML Server',
         description:
             'A web tool for software engineers to practice creating UML diagrams like sequence and class diagrams using PlantUML syntax. Key features include a problem collection for UML practice, interactive UML diagram creation, and options to download completed diagrams. For additional support, cheat sheets with example UML diagrams and source code are available as guidance.',
         tags: ['JavaScript', 'PHP', 'Amazon EC2'],
         githubUrl: 'https://github.com/tkwonn/plantuml',
         appUrl: 'https://plantuml.taesokkwon.com/',
     },
-    // {
-    //     image: video,
-    //     title: 'Email Verification System',
-    //     description:
-    //         'FFMPEGライブラリを活用し、ユーザーがアップロードした動画を圧縮、変換、編集できるデスクトップアプリを開発しました。OSにフルアクセス可能なNode.js環境を提供するElectronのメインプロセスとHTMLのDOMにアクセス可能なレンダラープロセス間の通信によって、効率的なイベント処理を実現しています。',
-    //     tags: ['TypeScript', 'PHP', 'TailwindCSS', 'Amazon EC2'],
-    //     githubUrl: 'https://github.com/tkwonn/video-compressor',
-    //     appUrl: 'https://github.com/tkwonn/video-compressor/releases',
-    // },
     {
         image: video,
         title: 'Video Compressor',
         description:
-            'A desktop application that lets users compress, convert, and edit videos with the FFMPEG library. Built with Electron, it facilitates efficient event handling by linking the main process, which accesses the OS via Node.js, with the renderer process, which manages the HTML DOM.',
+            'A desktop application that lets users compress and convert videos with the ffmpeg library. Built with Electron, it facilitates efficient event handling by linking the main process, which accesses the OS via Node.js, with the renderer process, which manages the HTML DOM.',
         tags: ['TypeScript', 'React', 'Tailwind CSS', 'Electron'],
         githubUrl: 'https://github.com/tkwonn/video-compressor',
         appUrl: 'https://github.com/tkwonn/video-compressor/releases',
@@ -55,13 +47,8 @@ export const projects = [
         image: portfolio,
         title: 'Portfolio Website',
         description:
-            'Building my portfolio website gave me hands-on experience with domain setup, configuring a web server, and deploying on a cloud services. Next.js was used for server-side rendering, and Tailwind CSS for responsive design(?).',
-        tags: [
-            'TypeScript',
-            'Next.js',
-            'Tailwind CSS',
-            'Amazon EC2',
-        ],
+            'Building my portfolio website gave me hands-on experience with domain setup, configuring a web server, deploying on a cloud services, and setting up CI/CD pipelines.',
+        tags: ['TypeScript', 'Next.js', 'Tailwind CSS', 'Amazon EC2'],
         githubUrl: 'https://github.com/tkwonn/portfolio',
         appUrl: '/',
     },
@@ -78,7 +65,7 @@ export const projects = [
         image: connect4,
         title: 'Connect 4',
         description:
-            'Connect 4 is a turn-based game where two players take turns dropping colored balls into a grid, competing to align four balls vertically, horizontally, or diagonally. I implemented an AI opponent feature using the Monte Carlo Tree Search algorithm and managed the application state using React\'s Context API.',
+            "Connect 4 is a turn-based game where two players take turns dropping colored balls into a grid, competing to align four balls vertically, horizontally, or diagonally. I implemented an AI opponent feature using the Monte Carlo Tree Search algorithm and managed the application state using React's Context API.",
         tags: ['HTML5', 'CSS3', 'React'],
         githubUrl: 'https://github.com/TeamE-React/connect-4',
         appUrl: 'https://teame-connect4.vercel.app/',
