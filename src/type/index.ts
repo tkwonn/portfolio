@@ -1,5 +1,11 @@
 import { StaticImageData } from 'next/image';
 
+export interface Link {
+    name: string;
+    path: string;
+    description: string;
+}
+
 export interface Skill {
     name: string;
     years: string;
