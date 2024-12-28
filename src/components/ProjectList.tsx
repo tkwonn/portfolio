@@ -18,13 +18,13 @@ export default function ProjectsList({
     return (
         <>
             <div className="mb-8 flex items-center justify-between">
-                <h2 className="flex text-3xl font-bold">
-                    <div className="mr-4 h-10 w-1 bg-gray-700"></div>
+                <h2 className="flex text-xl font-bold sm:text-2xl lg:text-3xl">
+                    <div className="mr-4 h-8 w-1 bg-gray-700 sm:h-10"></div>
                     {title} Projects
                 </h2>
                 <Link
                     href={targetPath}
-                    className="rounded-md border border-white border-opacity-40 bg-white bg-opacity-80 px-4 py-2 text-gray-500 transition hover:bg-gray-200 hover:text-gray-950 dark:border-black/40 dark:bg-gray-950 dark:bg-opacity-75 dark:text-white dark:hover:text-gray-950"
+                    className="whitespace-nowrap rounded-md border border-white border-opacity-40 bg-white bg-opacity-80 px-3 py-1.5 text-sm text-gray-500 transition hover:bg-gray-200 hover:text-gray-950 sm:px-4 sm:py-2 sm:text-base dark:border-black/40 dark:bg-gray-950 dark:bg-opacity-75 dark:text-white dark:hover:text-gray-950"
                 >
                     View {targetText} Projects
                 </Link>

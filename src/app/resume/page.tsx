@@ -8,21 +8,19 @@ export default function Resume() {
         <main className="mb-20 flex flex-col items-center px-4">
             <section id="resume" className="mb-28 w-full max-w-[70rem] sm:mb-0">
                 <div className="flex items-center justify-between">
-                    <h2 className="mb-8 flex text-3xl font-bold">
-                        <div className="mr-4 h-10 w-1 bg-gray-700"></div>
+                    <h2 className="flex text-xl font-bold sm:text-2xl lg:text-3xl">
+                        <div className="mr-4 h-8 w-1 bg-gray-700 sm:h-10"></div>
                         Resume
                     </h2>
-                    <div className="mb-8 flex justify-center">
-                        <Link
-                            href="/assets/docs/resume-ja.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group flex cursor-pointer items-center gap-2 rounded-md border border-gray-300 bg-gray-100 px-7 py-3 outline-none transition hover:scale-105 focus:scale-105 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
-                        >
-                            View Resume
-                            <FiExternalLink className="opacity-60" />
-                        </Link>
-                    </div>
+                    <Link
+                        href="/assets/docs/resume-ja.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group flex items-center gap-2 whitespace-nowrap rounded-md border border-white border-opacity-40 bg-white bg-opacity-80 px-3 py-1.5 text-sm text-gray-500 transition hover:bg-gray-200 hover:text-gray-950 sm:px-4 sm:py-2 sm:text-base dark:border-black/40 dark:bg-gray-950 dark:bg-opacity-75 dark:text-white dark:hover:text-gray-950"
+                    >
+                        View Resume
+                        <FiExternalLink className="opacity-60" />
+                    </Link>
                 </div>
             </section>
             <Skill />
