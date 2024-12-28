@@ -4,32 +4,24 @@ import connect4 from '../../public/assets/img/connect4.png';
 import plantuml from '../../public/assets/img/plantuml.png';
 import portfolio from '../../public/assets/img/portfolio.png';
 import sketch from '../../public/assets/img/sketch.png';
+import snippet from '../../public/assets/img/snippet.png';
 import video from '../../public/assets/img/video.png';
 
-export const projects: Project[] = [
-    // {
-    //     image: plantuml,
-    //     title: 'Online Image Hosting Service',
-    //     description:
-    //         'FFMPEGライブラリを活用し、ユーザーがアップロードした動画を圧縮、変換、編集できるデスクトップアプリを開発しました。OSにフルアクセス可能なNode.js環境を提供するElectronのメインプロセスとHTMLのDOMにアクセス可能なレンダラープロセス間の通信によって、効率的なイベント処理を実現しています。',
-    //     tags: ['JavaScript', 'PHP', 'Amazon EC2', 'Amazon RDS'],
-    //     githubUrl: 'https://github.com/tkwonn/video-compressor',
-    //     appUrl: 'https://github.com/tkwonn/video-compressor/releases',
-    // },
-    // {
-    //     image: plantuml,
-    //     title: 'Text Snippet Sharing Service',
-    //     description:
-    //         'FFMPEGライブラリを活用し、ユーザーがアップロードした動画を圧縮、変換、編集できるデスクトップアプリを開発しました。OSにフルアクセス可能なNode.js環境を提供するElectronのメインプロセスとHTMLのDOMにアクセス可能なレンダラープロセス間の通信によって、効率的なイベント処理を実現しています。',
-    //     tags: ['JavaScript', 'PHP', 'MySQL', 'Amazon EC2'],
-    //     githubUrl: 'https://github.com/tkwonn/video-compressor',
-    //     appUrl: 'https://github.com/tkwonn/video-compressor/releases',
-    // },
+export const projects = [
+    {
+        image: snippet,
+        title: 'Text Snippet Sharing Service',
+        description:
+            'A Pastebin-like web application that enables instant sharing of text/code snippets. Features include syntax highlighting for multiple programming languages, customizable expiration times, and public/unlisted sharing options.',
+        tags: ['JavaScript', 'PHP', 'MySQL', 'Amazon EC2', 'Amazon RDS'],
+        githubUrl: 'https://github.com/tkwonn/text-snippet',
+        appUrl: 'https://text-snippet.taesokkwon.com/',
+    },
     {
         image: plantuml,
         title: 'PlantUML Server',
         description:
-            'A web tool for software engineers to practice creating UML diagrams like sequence and class diagrams using PlantUML syntax. Key features include a problem collection for UML practice, interactive UML diagram creation, and options to download completed diagrams. For additional support, cheat sheets with example UML diagrams and source code are available as guidance.',
+            'A web tool for software engineers to practice creating UML diagrams using PlantUML syntax. Key features include a problem collection for UML practice, interactive UML diagram creation, and options to download diagrams. Cheat sheets with example UML diagrams and source code are also available as guidance.',
         tags: ['JavaScript', 'PHP', 'Amazon EC2'],
         githubUrl: 'https://github.com/tkwonn/plantuml',
         appUrl: 'https://plantuml.taesokkwon.com/',
@@ -39,7 +31,7 @@ export const projects: Project[] = [
         title: 'Video Compressor',
         description:
             'A desktop application that lets users compress and convert videos with the ffmpeg library. Built with Electron, it facilitates efficient event handling by linking the main process, which accesses the OS via Node.js, with the renderer process, which manages the HTML DOM.',
-        tags: ['TypeScript', 'React', 'Tailwind CSS', 'Electron'],
+        tags: ['Electron', 'TypeScript', 'React', 'Tailwind CSS'],
         githubUrl: 'https://github.com/tkwonn/video-compressor',
         appUrl: 'https://github.com/tkwonn/video-compressor/releases',
     },
@@ -47,7 +39,7 @@ export const projects: Project[] = [
         image: portfolio,
         title: 'Portfolio Website',
         description:
-            'Building my portfolio website gave me hands-on experience with domain setup, configuring a web server, deploying on a cloud services, and setting up CI/CD pipelines.',
+            "Building my portfolio website gave me hands-on experience with domain setup, configuring a web server, deploying on a cloud services, and setting up CI/CD pipelines. This site is fully static by using Next.js's Static Export and does not require Node.js.",
         tags: ['TypeScript', 'Next.js', 'Tailwind CSS', 'Amazon EC2'],
         githubUrl: 'https://github.com/tkwonn/portfolio',
         appUrl: '/',
@@ -79,4 +71,4 @@ export const projects: Project[] = [
         githubUrl: 'https://github.com/tkwonn/clicker-empire-game',
         appUrl: 'https://clicker-empire-game-five.vercel.app/',
     },
-] as const;
+] as const satisfies Project[];

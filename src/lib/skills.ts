@@ -1,23 +1,29 @@
 import { Skill } from '@/type';
 
-export const languages: readonly Skill[] = [
+export const languages = [
     {
         name: 'HTML/CSS',
         years: '3.5 yrs',
         proficiency: [
-            'Able to turn UI/UX design wireframes into user-friendly layouts using Semantic HTML and CSS libraries.',
+            'Able to turn UI/UX design wireframes into user-friendly layouts using Semantic HTML and CSS libraries (Bootstrap, Tailwind CSS, Emotion, and CSS Modules).',
         ],
     },
     {
         name: 'Type/JavaScript',
         years: '3 yrs',
         proficiency: [
-            '- Has experience with Web APIs such as DOM, Fetch, Web Storage, and Web Socket API.',
+            '- Has experience using Web APIs such as DOM, Fetch, Web Storage, and Web Socket.',
+            '- Understands the concepts of Structural typing (Type system) and can avoid using type assertions.',
         ],
     },
     {
+        name: 'Python',
+        years: '2 yrs',
+        proficiency: [''],
+    },
+    {
         name: 'PHP',
-        years: '3 yrs',
+        years: '2 yrs',
         proficiency: [
             '- Able to perform database operations using MySQLi.',
             '- Able to implement security measures to prevent vulnerabilities like SQL injection, OS command injection, and XSS.',
@@ -25,15 +31,27 @@ export const languages: readonly Skill[] = [
         ],
     },
     {
-        name: 'Java',
-        years: '3 yrs',
+        name: 'C',
+        years: '2 yrs',
+        proficiency: [''],
+    },
+    {
+        name: 'Go',
+        years: '~ 1 yr',
         proficiency: [
-            '- Has experience developing applications using Android Studio with Kotlin.',
+            '- Has experience developing Web APIs using the net/http package and Echo Framework.',
+            '- Can create tests using the testing package.',
+            '- Understands the concepts of Structural typing (Type system).',
         ],
     },
     {
+        name: 'Java',
+        years: '2 yrs',
+        proficiency: [''],
+    },
+    {
         name: 'Vue.js',
-        years: '2.5 yrs',
+        years: '2 yrs',
         proficiency: [
             '- Has experience developing SPAs using Vue Router and Vuex.',
             '- Has experience integrating applications with server-side frameworks like Laravel and Django.',
@@ -41,7 +59,7 @@ export const languages: readonly Skill[] = [
     },
     {
         name: 'React',
-        years: '2.5 yrs',
+        years: '2 yrs',
         proficiency: [
             '- Can manage state using Context API and Redux.',
             '- Can create reusable custom hooks.',
@@ -64,17 +82,9 @@ export const languages: readonly Skill[] = [
             '- Able to perform database operations using Eloquent ORM.',
         ],
     },
-    {
-        name: 'Go',
-        years: '~ 1 yr',
-        proficiency: [
-            '- Has experience developing Web APIs using the net/http package and Echo Framework.',
-            '- Can create tests using the testing package.',
-        ],
-    },
-] as const;
+] as const satisfies Skill[];
 
-export const databases: readonly Skill[] = [
+export const databases = [
     {
         name: 'MySQL',
         years: '2 yrs',
@@ -93,19 +103,27 @@ export const databases: readonly Skill[] = [
     },
     // {
     //     name: 'memcached',
-    //     years: '2 yrs',
+    //     years: '~ 1 yr',
     //     proficiency: [
-    //         'Can perform CRUD operations on data by referring to the official documentation.',
+    //         '',
     //     ]
     // },
-] as const;
+] as const satisfies Skill[];
 
-export const misc: readonly Skill[] = [
+export const misc = [
+    {
+        name: 'Linux',
+        years: '2 yrs',
+        proficiency: [
+            '- Can use basic shell commands, create shell scripts, and set file permissions (Ubuntu).',
+            '- Has experience using Linux system call APIs and standard C libraries related to File I/O, Process, and Socket.',
+        ],
+    },
     {
         name: 'Git',
         years: '3 yrs',
         proficiency: [
-            '- Can use essential commands for version control, branching, and managing changes in local and remote repositories.',
+            '- Can use essential commands for version control in local and remote repositories.',
             '- Has experience creating issues, pull requests, and conducting code reviews in team collaboration.',
         ],
     },
@@ -113,22 +131,15 @@ export const misc: readonly Skill[] = [
         name: 'GitHub Actions',
         years: '~ 1 yr',
         proficiency: [
-            '- Can set up CI pipelines to run tests and static analysis.',
+            '- Can set up CI pipelines to run linter and tests.',
             '- Can deploy applications to cloud services using OpenID Connect.',
-        ],
-    },
-    {
-        name: 'Linux',
-        years: '2 yrs',
-        proficiency: [
-            'Can use basic Unix commands, create shell scripts, set file permissions, etc. using Ubuntu.',
         ],
     },
     {
         name: 'Nginx',
         years: '~ 1 yr',
         proficiency: [
-            '- Understands basic syntax such as directives and contexts, and can edit configuration files to set up reverse proxy, SSL certificates, and security headers.',
+            '- Understands basic directives and contexts, and can edit configuration files to set up reverse proxy, SSL certificates, and security headers.',
             '- Able to configure connections to web applications using PHP-FPM and TCP sockets.',
         ],
     },
@@ -137,19 +148,20 @@ export const misc: readonly Skill[] = [
         years: '~ 1 yr',
         proficiency: [
             // 'VPC: ',
-            'EC2: Can set up Nginx servers and allocate Elastic IPs.',
+            'EC2: Can set up Nginx & MySQL servers and allocate Elastic IPs.',
             // 'S3: ',
             // 'RDS: ',
             'IAM: Can set up roles and custom policies to control access.',
         ],
     },
-    // {
-    //     name: 'Docker',
-    //     years: '~ 1 yrs',
-    //     proficiency: [
-    //         '- Dockerfileを作成して、イメージをビルドすることができる->best practicesを参考に?。',
-    //         '- Docker composeを使用して、複数のコンテナを管理することができる。',
-    //         '- 複数の環境（開発、ステージング、本番）でコンテナをデプロイすることができる(?)',
-    //     ]
-    // },
-] as const;
+    {
+        name: 'Docker',
+        years: '~ 1 yr',
+        proficiency: [
+            '- Understands the basic idea of underlying technologies such as namespaces, cgroups, and union file systems.',
+            '- Can create Dockerfiles to build images and run containers.',
+            '- Docker composeを使用して、複数のコンテナを管理することができる。',
+            // '- 複数の環境（開発、ステージング、本番）でコンテナをデプロイすることができる',
+        ],
+    },
+] as const satisfies Skill[];

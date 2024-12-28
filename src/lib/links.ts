@@ -1,3 +1,5 @@
+import { Link } from '@/type';
+
 export const links = [
     {
         name: 'Home',
@@ -16,4 +18,4 @@ export const links = [
         description:
             'List of my projects with summaries, live URLs, and GitHub links.',
     },
-] as const;
+] as const satisfies Link[];
