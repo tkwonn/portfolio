@@ -6,9 +6,9 @@
 ## Table of Contents
 
 -   [About](#-about)
--   [Built with](#-built-with)
+-   [Built with](#️-built-with)
 -   [Architecture](#️-architecture)
--   [Server Configuration](#-server-configuration)
+-   [Server Configuration](#️-server-configuration)
 -   [CI/CD](#-cicd)
 
 ## 💡 About
