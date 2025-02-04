@@ -3,29 +3,21 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/tkwonn/portfolio?color=chocolate)](https://github.com/tkwonn/portfolio/commits/)
 [![deploy to EC2](https://github.com/tkwonn/portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/tkwonn/portfolio/actions/workflows/deploy.yml)
 
-## What is this
+## Table of Contents
+
+-   [About](#-about)
+-   [Built with](#-built-with)
+-   [Architecture](#️-architecture)
+-   [Server Configuration](#-server-configuration)
+-   [CI/CD](#-cicd)
+
+## 💡 About
 
 This is a personal portfolio project designed to showcase my personal background, skills, and projects.
 
 **URL:** [taesokkwon.com](https://taesokkwon.com)
 
-<br>
-
-## Table of Contents
-
-1. [Built with](#built-with)
-2. [Architecture](#architecture)
-3. [Server Configuration](#server-configuration)
-    1. [SSL/TLS Setup](#ssltls-setup)
-    2. [Security Headers](#security-headers)
-    3. [Cache Control Settings](#cache-control-settings)
-4. [CI/CD](#cicd)
-    1. [Continuous Integration](#continuous-integration)
-    2. [Continuous Delivery](#continuous-deployment)
-
-<br>
-
-## Built with
+## 🏗️ Built with
 
 | **Category** | **Technology**                    |
 | ------------ | --------------------------------- |
@@ -36,23 +28,19 @@ This is a personal portfolio project designed to showcase my personal background
 
 This site is fully static by using Next.js's Static Export and does not require Node.js.
 
-<br>
-
-## Architecture
+## 🏛️ Architecture
 
 This website is hosted on a single AWS EC2 instance and uses Nginx as a reverse proxy to manage multiple services under different domains.
 
-| **Server name**                                                    | **Backend Service**                             |
-| ------------------------------------------------------------------ | ----------------------------------------------- |
-| [taesokkwon.com](https://taesokkwon.com)                           | Static site served by Nginx                     |
-| [plantuml.taesokkwon.com](https://plantuml.taesokkwon.com)         | PHP application served by PHP-FPM (via FastCGI) |
-| [text-snippet.taesokkwon.com](https://text-snippet.taesokkwon.com) | PHP application served by PHP-FPM (via FastCGI) |
-
-<br>
+| **Server name**                                                                               | **Backend Service**                             | **GitHub Repository**                                                       |
+| --------------------------------------------------------------------------------------------- | ----------------------------------------------- | --------------------------------------------------------------------------- |
+| <a href="https://taesokkwon.com" target="_blank">taesokkwon.com</a>                           | Static site served by Nginx                     | -                                                                           |
+| <a href="https://plantuml.taesokkwon.com" target="_blank">plantuml.taesokkwon.com</a>         | PHP application served by PHP-FPM (via FastCGI) | <a href="https://github.com/tkwonn/plantuml" target="_blank">README</a>     |
+| <a href="https://text-snippet.taesokkwon.com" target="_blank">text-snippet.taesokkwon.com</a> | PHP application served by PHP-FPM (via FastCGI) | <a href="https://github.com/tkwonn/text-snippet" target="_blank">README</a> |
 
 ![System Architecture](docs/architecture.svg)
 
-## Server Configuration
+## ⚙️ Server Configuration
 
 #### SSL/TLS Setup
 
@@ -90,18 +78,16 @@ gzip on;
 gzip_types text/plain text/css application/javascript application/json image/svg+xml;
 ```
 
-<br>
+## 🚀 CI/CD
 
-## CI/CD
+This project uses GitHub Actions to automate testing and deployment workflows with the following configurations.
 
-The project uses GitHub Actions to automate testing and deployment workflows with the following configurations:
-
-### Continuous Integration
+#### Continuous Integration
 
 -   Utilizes npm cache and Next.js cache to speed up builds
 -   Code quality checks using Prettier and ESLint
 
-### Continuous Deployment
+#### Continuous Deployment
 
 -   Secure AWS Authentication using OpenID Connect (short-lived tokens)
 -   Minimal IAM permissions to ensure secure cloud role operations
