@@ -34,20 +34,11 @@ export const projects = [
         githubUrl: 'https://github.com/tkwonn/tree',
         appUrl: 'https://asciinema.org/a/4NXUfSTGgVhEAULL0s0thOAiA',
     },
-    // {
-    //     image: traceroute,
-    //     title: 'reliable data transfer',
-    //     description:
-    //         'A tool for tracking the path of network packets and measuring latency across each hop.',
-    //     tags: ['Python', 'Networking',],
-    //     githubUrl: 'https://github.com/tkwonn/traceroute',
-    //     appUrl: 'https://asciinema.org/a/oBjkDptRGJcYiEp8sMAtmovxR',
-    // },
     {
         image: traceroute,
         title: 'traceroute',
         description:
-            'A tool for tracking the path of network packets and measuring latency across each hop.',
+            'A tool for tracking a path of network packets and measuring latency across each hop.',
         tags: ['Python', 'Socket', 'ICMP'],
         githubUrl: 'https://github.com/tkwonn/traceroute',
         appUrl: 'https://asciinema.org/a/oBjkDptRGJcYiEp8sMAtmovxR',

@@ -5,81 +5,80 @@ export const languages = [
         name: 'HTML/CSS',
         years: '3.5 yrs',
         proficiency: [
-            'Able to turn UI/UX design wireframes into user-friendly layouts using Semantic HTML and CSS libraries (Bootstrap, Tailwind CSS, Emotion, and CSS Modules).',
+            '- Developed user-friendly layouts from UI/UX design wireframes using Semantic HTML and CSS libraries (Bootstrap, Tailwind CSS, Emotion, and CSS Modules).',
         ],
     },
     {
         name: 'Type/JavaScript',
         years: '3 yrs',
         proficiency: [
-            '- Has experience using Web APIs such as DOM, Fetch, Web Storage, and Web Socket.',
-            '- Understands the concepts of Structural typing (Type system) and can avoid using type assertions.',
+            '- Utilized Web APIs such as DOM, Fetch, Web Storage, and Web Socket.',
+            '- Applied Structural typing concepts to avoid type assertions and improve code quality.',
         ],
     },
     {
         name: 'Python',
         years: '2 yrs',
-        proficiency: [''],
+        proficiency: [
+            '- Built CLI tools using the standard Python library and developed web applications with Django.',
+        ],
     },
     {
         name: 'PHP',
         years: '2 yrs',
         proficiency: [
-            '- Able to perform database operations using MySQLi.',
-            '- Able to implement security measures to prevent vulnerabilities like SQL injection, OS command injection, and XSS.',
-            '- Can write tests using PHPUnit.',
+            '- Performed database operations using MySQLi.',
+            '- Enhanced application security by preventing vulnerabilities like SQL injection, OS command injection, and XSS.',
+            '- Wrote and executed tests using PHPUnit.',
         ],
     },
     {
         name: 'C',
         years: '2 yrs',
-        proficiency: [''],
+        proficiency: [
+            '- Developed CLI tools leveraging standard C libraries for File I/O, Process, and Socket operations.',
+        ],
     },
     {
         name: 'Go',
         years: '~ 1 yr',
         proficiency: [
-            '- Has experience developing Web APIs using the net/http package and Echo Framework.',
-            '- Can create tests using the testing package.',
-            '- Understands the concepts of Structural typing (Type system).',
+            '- Built Web APIs using the net/http package and Echo Framework.',
+            '- Wrote and executed tests using Go testing package.',
+            '- Applied Structural typing concepts to ensure type safety.',
         ],
-    },
-    {
-        name: 'Java',
-        years: '2 yrs',
-        proficiency: [''],
     },
     {
         name: 'Vue.js',
         years: '2 yrs',
         proficiency: [
-            '- Has experience developing SPAs using Vue Router and Vuex.',
-            '- Has experience integrating applications with server-side frameworks like Laravel and Django.',
+            '- Developed SPAs using Vue Router and Vuex.',
+            '- Integrated frontend applications with server-side frameworks like Laravel and Django.',
         ],
     },
     {
         name: 'React',
         years: '2 yrs',
         proficiency: [
-            '- Can manage state using Context API and Redux.',
-            '- Can create reusable custom hooks.',
+            '- Managed application state using Context API and Redux.',
+            '- Designed reusable custom hooks to improve code maintainability.',
         ],
     },
     {
         name: 'Django',
         years: '~ 1 yr',
         proficiency: [
-            '- Can develop Web applications based on the MVT architecture.',
-            '- Can create Web APIs using Django REST framework and JWT.',
-            '- Able to perform database operations using PostgreSQL.',
+            '- Built web applications following the MVT architecture.',
+            '- Created Web APIs using Django REST framework and JWT.',
+            '- Performed database operations with PostgreSQL.',
         ],
     },
     {
         name: 'Laravel',
         years: '~ 1 yr',
         proficiency: [
-            '- Can develop Web applications based on the MVC architecture.',
-            '- Able to perform database operations using Eloquent ORM.',
+            '- Developed web applications based on the MVC architecture.',
+            '- Managed database operations using Eloquent ORM.',
         ],
     },
 ] as const satisfies Skill[];
@@ -87,27 +86,28 @@ export const languages = [
 export const databases = [
     {
         name: 'MySQL',
-        years: '2 yrs',
+        years: '2.5 yrs',
         proficiency: [
-            '- Can write basic DDL/DML, aggregate functions, GROUP BY, HAVING, JOIN, etc.',
-            '- Able to create ER diagrams and design normalized databases.',
-            '- Can create migration files and manage database versions.',
+            '- Wrote and optimized DDL/DML queries, including aggregate functions, GROUP BY, HAVING, and JOIN operations.',
+            '- Improved query performance by implementing appropriate indexes based on EXPLAIN analysis.',
+            '- Designed ER diagrams and normalized database schemas.',
+            '- Managed database versions through migration files.',
+        ],
+    },
+    {
+        name: 'Memcached',
+        years: '~ 1 yr',
+        proficiency: [
+            '- Implemented caching mechanisms using the Memcached client library for efficient data storage and retrieval.',
         ],
     },
     {
         name: 'Cloud Firestore',
         years: '2 yrs',
         proficiency: [
-            'Can perform CRUD operations on data by referring to the official documentation.',
+            '- Performed CRUD operations on data by leveraging the official documentation.',
         ],
     },
-    // {
-    //     name: 'memcached',
-    //     years: '~ 1 yr',
-    //     proficiency: [
-    //         '',
-    //     ]
-    // },
 ] as const satisfies Skill[];
 
 export const misc = [
@@ -115,53 +115,55 @@ export const misc = [
         name: 'Linux',
         years: '2 yrs',
         proficiency: [
-            '- Can use basic shell commands, create shell scripts, and set file permissions (Ubuntu).',
-            '- Has experience using Linux system call APIs and standard C libraries related to File I/O, Process, and Socket.',
+            '- Utilized basic shell commands, created shell scripts, set up cron jobs, and managed file permissions on Ubuntu.',
+            '- Employed Linux system call APIs and standard C libraries for File I/O, Process, and Socket operations.',
         ],
     },
     {
         name: 'Git',
         years: '3 yrs',
         proficiency: [
-            '- Can use essential commands for version control in local and remote repositories.',
-            '- Has experience creating issues, pull requests, and conducting code reviews in team collaboration.',
+            '- Managed version control using essential Git commands for both local and remote repositories.',
+            '- Collaborated with teams by creating issues, pull requests, and conducting code reviews.',
         ],
     },
     {
         name: 'GitHub Actions',
         years: '~ 1 yr',
         proficiency: [
-            '- Can set up CI pipelines to run linter and tests.',
-            '- Can deploy applications to cloud services using OpenID Connect.',
+            '- Configured CI pipelines to run linters and tests.',
+            '- Deployed applications to cloud services using OpenID Connect.',
+            '- Optimized workflow performance by implementing caching and artifacts for building dependencies and job outputs.',
         ],
     },
     {
         name: 'Nginx',
         years: '~ 1 yr',
         proficiency: [
-            '- Understands basic directives and contexts, and can edit configuration files to set up reverse proxy, SSL certificates, and security headers.',
-            '- Able to configure connections to web applications using PHP-FPM and TCP sockets.',
+            '- Edited configuration files to set up reverse proxy, SSL certificates, and security headers.',
+            '- Implemented rate limiting to manage request frequency and protect server resources.',
+            '- Configured connections to web applications using PHP-FPM and TCP sockets.',
         ],
     },
     {
         name: 'AWS',
         years: '~ 1 yr',
         proficiency: [
-            // 'VPC: ',
-            'EC2: Can set up Nginx & MySQL servers and allocate Elastic IPs.',
-            // 'S3: ',
-            // 'RDS: ',
-            'IAM: Can set up roles and custom policies to control access.',
+            '- Set up Nginx and MySQL servers on EC2 instances and allocated Elastic IPs.',
+            '- Configured IAM roles and custom policies to manage access control.',
+            '- Deployed MySQL servers on RDS within private subnets.',
+            '- Managed static files using S3 and AWS SDK for PHP.',
+            '- Secured private S3 content delivery through CloudFront with Origin Access Control.',
+            '- Implemented secure server management using SSM Session Manager, eliminating the need for port openings and SSH key management.',
         ],
     },
     {
         name: 'Docker',
         years: '~ 1 yr',
         proficiency: [
-            '- Understands the basic idea of underlying technologies such as namespaces, cgroups, and union file systems.',
-            '- Can create Dockerfiles to build images and run containers.',
-            '- Docker composeを使用して、複数のコンテナを管理することができる。',
-            // '- 複数の環境（開発、ステージング、本番）でコンテナをデプロイすることができる',
+            '- Created Dockerfiles to build images and run containers.',
+            '- Managed multi-container environments using Docker Compose.',
+            '- Published images to Docker Hub and deployed containers across development and production environments.',
         ],
     },
 ] as const satisfies Skill[];
