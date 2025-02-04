@@ -17,8 +17,12 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" className="appearance-auto !scroll-smooth">
+            <head>
+                <link rel="icon" href="data:," />
+            </head>
             <body
                 className={`${inter.className} relative bg-gray-300 pt-28 text-gray-950 sm:pt-36`}
+                suppressHydrationWarning
             >
                 <Header />
                 {children}
