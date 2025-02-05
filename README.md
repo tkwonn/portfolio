@@ -89,6 +89,6 @@ This project uses GitHub Actions to automate testing and deployment workflows wi
 
 #### Continuous Deployment
 
--   Secure AWS Authentication using OpenID Connect (short-lived tokens)
--   Minimal IAM permissions to ensure secure cloud role operations
--   AWS Systems Manager (SSM) for secure remote command execution (no direct SSH access or security group changes)
+-   Temporary Security Group Modifications: Dynamically updates the EC2 instance’s security group to allow SSH access from the GitHub Actions runner.
+-   SSH Deployment: Deploys updates via an SSH connection that remotely executes commands (such as pulling the latest code, installing dependencies, building the project, and reloading Nginx) on the production server.
+-   Post-Deployment Cleanup: Revokes the temporary SSH access immediately after deployment to maintain security.
