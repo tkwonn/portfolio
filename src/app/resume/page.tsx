@@ -13,7 +13,7 @@ export default function Resume() {
                         Resume
                     </h2>
                     <Link
-                        href="/assets/docs/resume-ja.pdf"
+                        href="/assets/docs/resume.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group flex items-center gap-2 whitespace-nowrap rounded-md border border-white border-opacity-40 bg-white bg-opacity-80 px-3 py-1.5 text-sm text-gray-500 transition hover:bg-gray-200 hover:text-gray-950 sm:px-4 sm:py-2 sm:text-base dark:border-black/40 dark:bg-gray-950 dark:bg-opacity-75 dark:text-white dark:hover:text-gray-950"

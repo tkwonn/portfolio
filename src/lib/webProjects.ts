@@ -31,7 +31,7 @@ export const projects = [
         title: 'Text Snippet Sharing Service',
         description:
             'A Pastebin-like application that enables instant sharing of text and code snippets. Key features include a syntax highlighting for multiple programming languages, customizable expiration times, and public/unlisted sharing options.',
-        tags: ['JavaScript', 'PHP', 'MySQL', 'Amazon EC2', 'Amazon RDS'],
+        tags: ['JavaScript', 'PHP', 'Amazon EC2', 'Amazon RDS'],
         githubUrl: 'https://github.com/tkwonn/text-snippet',
         appUrl: 'https://text-snippet.taesokkwon.com/',
     },
