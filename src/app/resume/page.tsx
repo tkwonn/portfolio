@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { FiExternalLink } from 'react-icons/fi';
-// import Experience from '@/components/Experience';
+import Experience from '@/components/Experience';
 import Skill from '@/components/Skill';
 
 export default function Resume() {
@@ -24,7 +24,7 @@ export default function Resume() {
                 </div>
             </section>
             <Skill />
-            {/* <Experience /> */}
+            <Experience />
         </main>
     );
 }
