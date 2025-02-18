@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Project } from '@/type';
 
@@ -13,7 +12,7 @@ export default function Card({
     appUrl,
 }: Project) {
     return (
-        <motion.div className="group mb-8 h-full w-full last:mb-0">
+        <div className="group mb-8 h-full w-full last:mb-0">
             <section className="dark:bg-white/2 flex h-full flex-col overflow-hidden rounded-lg border border-black/5 bg-gray-100 transition hover:bg-gray-200 dark:text-black dark:hover:border-black/10 dark:hover:bg-white/5">
                 <div className="flex h-full flex-col">
                     <a href={appUrl} target="_blank" rel="noopener noreferrer">
@@ -65,6 +64,6 @@ export default function Card({
                     </div>
                 </div>
             </section>
-        </motion.div>
+        </div>
     );
 }

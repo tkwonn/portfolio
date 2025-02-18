@@ -21,11 +21,11 @@ export default function RootLayout({
                 <link rel="icon" href="data:," />
             </head>
             <body
-                className={`${inter.className} relative bg-gray-300 pt-28 text-gray-950 sm:pt-36`}
+                className={`${inter.className} relative bg-gray-300 text-gray-950`}
                 suppressHydrationWarning
             >
                 <Header />
-                {children}
+                <main className="mt-28 sm:mt-36">{children}</main>
                 <Footer />
             </body>
         </html>
