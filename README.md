@@ -5,11 +5,11 @@
 
 ## Table of Contents
 
--   [About](#-about)
--   [Built with](#️-built-with)
--   [Architecture](#️-architecture)
--   [Server Configuration](#️-server-configuration)
--   [CI/CD](#-cicd)
+- [About](#-about)
+- [Built with](#️-built-with)
+- [Architecture](#️-architecture)
+- [Server Configuration](#️-server-configuration)
+- [CI/CD](#-cicd)
 
 ## 💡 About
 
@@ -44,7 +44,7 @@ This website is hosted on a single AWS EC2 instance and uses Nginx as a reverse 
 
 #### SSL/TLS Setup
 
--   All services are secured with SSL/TLS certificates managed through LetsEncrypt (automatic certificate renewal via Certbot's systemd timer)
+- All services are secured with SSL/TLS certificates managed through LetsEncrypt (automatic certificate renewal via Certbot's systemd timer)
 
 #### Security Headers
 
@@ -66,8 +66,8 @@ map $sent_http_content_type $cache_control {
 }
 ```
 
--   HTML: No caching, always serves fresh content.
--   Images and static files: Cached for one year and marked as immutable.
+- HTML: No caching, always serves fresh content.
+- Images and static files: Cached for one year and marked as immutable.
 
 Since Next.js generates unique filenames for each build, any changes automatically generate new filenames, ensuring updates are reflected despite the immutable setting (cache-busting).
 
@@ -84,11 +84,11 @@ This project uses GitHub Actions to automate testing and deployment workflows wi
 
 #### Continuous Integration
 
--   Utilizes npm cache and Next.js cache to speed up builds
--   Code quality checks using Prettier and ESLint
+- Utilizes npm cache and Next.js cache to speed up builds
+- Code quality checks using Prettier and ESLint
 
 #### Continuous Deployment
 
--   Temporary Security Group Modifications: Dynamically updates the EC2 instance’s security group to allow SSH access from the GitHub Actions runner.
--   SSH Deployment: Deploys updates via an SSH connection that remotely executes commands (such as pulling the latest code, installing dependencies, building the project, and reloading Nginx) on the production server.
--   Post-Deployment Cleanup: Revokes the temporary SSH access immediately after deployment to maintain security.
+- Temporary Security Group Modifications: Dynamically updates the EC2 instance’s security group to allow SSH access from the GitHub Actions runner.
+- SSH Deployment: Deploys updates via an SSH connection that remotely executes commands (such as pulling the latest code, installing dependencies, building the project, and reloading Nginx) on the production server.
+- Post-Deployment Cleanup: Revokes the temporary SSH access immediately after deployment to maintain security.
