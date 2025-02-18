@@ -17,7 +17,7 @@ export default function ProjectsList({
     projects,
 }: ProjectsListProps) {
     return (
-        <main className="mb-0 flex flex-col items-center px-4 sm:mb-8">
+        <main className="mb-8 flex flex-col items-center px-4 sm:mb-8">
             <section id="projects" className="w-full max-w-[76rem]">
                 <div className="mb-8 flex items-center justify-between">
                     <h2 className="flex text-lg font-bold sm:text-3xl">

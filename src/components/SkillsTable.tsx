@@ -25,9 +25,9 @@ export default function Table({ header, rows }: Props) {
                             <th className="w-10 border-x bg-gray-100 px-2 py-2 sm:px-4">
                                 {t.skills.table.columns.years}
                             </th>
-                            <th className="w-[75%] border-x bg-gray-100 px-2 py-2 sm:px-4">
+                            {/* <th className="w-[75%] border-x bg-gray-100 px-2 py-2 sm:px-4">
                                 {t.skills.table.columns.deliverables}
-                            </th>
+                            </th> */}
                         </tr>
                     </thead>
                     <tbody>
@@ -45,7 +45,7 @@ export default function Table({ header, rows }: Props) {
                                 <td className="border-x px-2 py-2 text-center text-gray-900 md:px-4">
                                     {skill.years}
                                 </td>
-                                <td className="border-x px-2 py-2 text-gray-900 md:px-4">
+                                {/* <td className="border-x px-2 py-2 text-gray-900 md:px-4">
                                     {skill.output.map((line, index) => (
                                         <p
                                             key={index}
@@ -58,7 +58,7 @@ export default function Table({ header, rows }: Props) {
                                             {line}
                                         </p>
                                     ))}
-                                </td>
+                                </td> */}
                             </tr>
                         ))}
                     </tbody>
