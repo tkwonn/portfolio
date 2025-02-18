@@ -25,7 +25,7 @@ export default function Header() {
 
     return (
         <>
-            <header className="fixed left-1/2 top-8 z-[999] -translate-x-1/2">
+            <header className="fixed left-5 top-8 z-[999] sm:left-1/2 sm:-translate-x-1/2">
                 <motion.div
                     className="flex w-auto max-w-[90vw] items-center justify-center gap-4 overflow-x-auto rounded-full border border-black/40 border-opacity-85 bg-gray-950 bg-opacity-75 px-2 py-2 shadow-lg shadow-black/[0.03] sm:px-4"
                     initial={{ y: -30, opacity: 0 }}

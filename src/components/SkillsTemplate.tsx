@@ -41,7 +41,7 @@ export default function SkillsTemplate() {
 
     return (
         <main className="mb-10 flex flex-col items-center px-4">
-            <section id="skills" className="mb-28 w-full max-w-[76rem] sm:mb-0">
+            <section id="skills" className="w-full max-w-[76rem]">
                 <div className="flex items-center justify-between">
                     <h2 className="flex text-xl font-bold sm:text-2xl lg:text-3xl">
                         <div className="mr-4 h-8 w-1 bg-gray-700 sm:h-10"></div>

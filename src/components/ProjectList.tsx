@@ -23,13 +23,13 @@ export default function ProjectsList({
                 className="mb-28 w-full max-w-[76rem] sm:mb-0"
             >
                 <div className="mb-8 flex items-center justify-between">
-                    <h2 className="flex text-xl font-bold sm:text-2xl lg:text-3xl">
-                        <div className="mr-4 h-8 w-1 bg-gray-700 sm:h-10"></div>
+                    <h2 className="flex text-xl font-bold sm:text-3xl">
+                        <div className="mr-4 h-6 w-1 bg-gray-700 sm:h-10"></div>
                         {title}
                     </h2>
                     <Link
                         href={switchPath}
-                        className="group flex items-center gap-2 whitespace-nowrap rounded-full border border-black/40 bg-gray-950 bg-opacity-75 px-3 py-1.5 text-sm text-gray-200 transition hover:bg-white hover:text-black sm:px-4 sm:py-2 sm:text-base"
+                        className="group flex items-center gap-2 whitespace-nowrap rounded-full border border-black/40 bg-gray-950 bg-opacity-75 px-3 py-1.5 text-xs text-gray-200 transition hover:bg-white hover:text-black sm:px-4 sm:py-2 sm:text-base"
                     >
                         {buttonText}
                         <GoArrowSwitch />

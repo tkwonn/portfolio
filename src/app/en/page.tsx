@@ -14,7 +14,7 @@ export default function Home() {
         <main className="flex flex-col items-center px-4">
             <section
                 id="home"
-                className="mb-32 w-full max-w-[50rem] text-center"
+                className="mb-16 w-full max-w-[50rem] text-center sm:mb-32"
             >
                 {/* Profile Image */}
                 <div className="mt-4 flex items-center justify-center">
