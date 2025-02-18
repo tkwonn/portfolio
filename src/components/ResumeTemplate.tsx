@@ -15,11 +15,11 @@ export default function ResumeTemplate() {
         : '/assets/docs/resume.pdf';
 
     return (
-        <main className="mb-10 flex flex-col items-center px-4">
-            <section id="resume" className="w-full max-w-[76rem] sm:mb-0">
+        <main className="mb-0 flex flex-col items-center px-4 sm:mb-8">
+            <section id="resume" className="w-full max-w-[76rem]">
                 <div className="flex items-center justify-between">
-                    <h2 className="flex text-xl font-bold sm:text-2xl lg:text-3xl">
-                        <div className="mr-4 h-8 w-1 bg-gray-700 sm:h-10"></div>
+                    <h2 className="flex text-lg font-bold sm:text-2xl lg:text-3xl">
+                        <div className="mr-4 h-7 w-1 bg-gray-700 sm:h-9"></div>
                         {t.resume.pageTitle}
                     </h2>
                     <Link
