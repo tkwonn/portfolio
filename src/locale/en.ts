@@ -76,7 +76,7 @@ export const en = {
             },
             columns: {
                 proficiency: 'Proficiency',
-                years: 'Exp Years',
+                years: 'Exp Years / Months',
                 deliverables: 'Projects / Outputs',
             },
             rows: {
@@ -108,19 +108,19 @@ export const en = {
                     {
                         name: 'GAS',
                         proficiency: 3,
-                        years: '<1y',
+                        years: '1m',
                         output: [],
                     },
                     {
                         name: 'Python',
-                        proficiency: 3,
-                        years: '2y',
+                        proficiency: 4,
+                        years: '3y',
                         output: [],
                     },
                     {
                         name: 'Ruby',
                         proficiency: 3,
-                        years: '<1y',
+                        years: '3m',
                         output: [],
                     },
                     {
@@ -137,14 +137,14 @@ export const en = {
                     },
                     {
                         name: 'C#',
-                        proficiency: 2,
-                        years: '<1y',
+                        proficiency: 3,
+                        years: '6m',
                         output: [],
                     },
                     {
                         name: 'Kotlin',
                         proficiency: 1,
-                        years: '<1y',
+                        years: '3m',
                         output: [],
                     },
                     {
@@ -156,19 +156,19 @@ export const en = {
                     {
                         name: 'C++',
                         proficiency: 2,
-                        years: '<1y',
+                        years: '6m',
                         output: [],
                     },
                     {
                         name: 'Golang',
                         proficiency: 3,
-                        years: '<1y',
+                        years: '8m',
                         output: [],
                     },
                     {
                         name: 'SQL',
                         proficiency: 3,
-                        years: '2.5y',
+                        years: '2y',
                         output: [],
                     },
                 ],
@@ -176,13 +176,13 @@ export const en = {
                     {
                         name: 'Bootstrap',
                         proficiency: 4,
-                        years: '<1y',
+                        years: '2y',
                         output: [],
                     },
                     {
                         name: 'TailwindCSS',
                         proficiency: 4,
-                        years: '<1y',
+                        years: '2y',
                         output: [],
                     },
                     {
@@ -194,13 +194,13 @@ export const en = {
                     {
                         name: 'Redux',
                         proficiency: 4,
-                        years: '<1y',
+                        years: '1y',
                         output: [],
                     },
                     {
                         name: 'Next.js',
                         proficiency: 3,
-                        years: '2y',
+                        years: '1y',
                         output: [],
                     },
                     {
@@ -212,25 +212,25 @@ export const en = {
                     {
                         name: 'Electron',
                         proficiency: 3,
-                        years: '<1y',
+                        years: '2m',
                         output: [],
                     },
                     {
                         name: 'Laravel',
                         proficiency: 2,
-                        years: '<1y',
+                        years: '3m',
                         output: [],
                     },
                     {
                         name: 'Django',
                         proficiency: 3,
-                        years: '<1y',
+                        years: '5m',
                         output: [],
                     },
                     {
                         name: 'Ruby on Rails',
                         proficiency: 2,
-                        years: '<1y',
+                        years: '3m',
                         output: [],
                     },
                 ],
@@ -244,45 +244,45 @@ export const en = {
                     {
                         name: 'PostgreSQL',
                         proficiency: 2,
-                        years: '<1y',
+                        years: '3m',
+                        output: [],
+                    },
+                    {
+                        name: 'SQLite',
+                        proficiency: 1,
+                        years: '1m',
                         output: [],
                     },
                     {
                         name: 'Firestore',
-                        proficiency: 2,
+                        proficiency: 3,
                         years: '1y',
                         output: [],
                     },
                     {
                         name: 'MongoDB',
                         proficiency: 1,
-                        years: '<1y',
-                        output: [],
-                    },
-                    {
-                        name: 'SQLite',
-                        proficiency: 1,
-                        years: '<1y',
+                        years: '3m',
                         output: [],
                     },
                     {
                         name: 'Memcached',
                         proficiency: 2,
-                        years: '<1y',
+                        years: '1m',
                         output: [],
                     },
                 ],
                 servers: [
                     {
                         name: 'Nginx',
-                        proficiency: 3,
-                        years: '<1y',
+                        proficiency: 4,
+                        years: '8m',
                         output: [],
                     },
                     {
                         name: 'Apache',
                         proficiency: 3,
-                        years: '<1y',
+                        years: '1m',
                         output: [],
                     },
                 ],
@@ -290,31 +290,37 @@ export const en = {
                     {
                         name: 'AWS',
                         proficiency: 3,
-                        years: '<1y',
+                        years: '8m',
                         output: [],
                     },
                     {
                         name: 'GCP',
                         proficiency: 2,
-                        years: '<1y',
+                        years: '3m',
                         output: [],
                     },
                     {
                         name: 'Firebase',
                         proficiency: 3,
-                        years: '<1y',
+                        years: '6m',
                         output: [],
                     },
                     {
                         name: 'Vercel',
                         proficiency: 4,
-                        years: '<1y',
+                        years: '1y',
                         output: [],
                     },
                     {
                         name: 'Heroku',
                         proficiency: 4,
-                        years: '<1y',
+                        years: '6m',
+                        output: [],
+                    },
+                    {
+                        name: 'Cloudflare Pages',
+                        proficiency: 2,
+                        years: '1m',
                         output: [],
                     },
                 ],
@@ -328,7 +334,7 @@ export const en = {
                     {
                         name: 'Windows',
                         proficiency: 2,
-                        years: '<1y',
+                        years: '6m',
                         output: [],
                     },
                     {
@@ -348,7 +354,7 @@ export const en = {
                     {
                         name: 'Docker',
                         proficiency: 3,
-                        years: '<1y',
+                        years: '8m',
                         output: [],
                     },
                     {
@@ -366,7 +372,7 @@ export const en = {
                     {
                         name: 'IntelliJ IDEA',
                         proficiency: 4,
-                        years: '<1y',
+                        years: '3m',
                         output: [],
                     },
                     {
@@ -384,7 +390,7 @@ export const en = {
                     {
                         name: 'Android Studio',
                         proficiency: 1,
-                        years: '<1y',
+                        years: '3m',
                         output: [],
                     },
                 ],
