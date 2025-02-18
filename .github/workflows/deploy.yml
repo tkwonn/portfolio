@@ -88,6 +88,9 @@ jobs:
             git pull origin main
             npm install
             npm run build
+            sudo rm -rf /var/www/portfolio/public
+            sudo mkdir -p /var/www/portfolio/public
+            sudo cp -R /home/ubuntu/web/portfolio/out/* /var/www/portfolio/public/
             sudo systemctl reload nginx
           EOF
           rm -f private_key
