@@ -47,7 +47,7 @@ export default function Home() {
                                 href="https://www.linkedin.com/in/taesok-kwon"
                                 target="_blank"
                                 rel="noopener"
-                                className="group flex items-center gap-1"
+                                className="group flex items-center gap-1 rounded-full border px-3 py-1.5 transition hover:bg-white hover:text-black sm:px-4 sm:py-2"
                             >
                                 <FaLinkedin className="h-5 w-5" />
                                 LinkedIn
@@ -58,7 +58,7 @@ export default function Home() {
                                 href="https://github.com/tkwonn"
                                 target="_blank"
                                 rel="noopener"
-                                className="group flex items-center gap-1"
+                                className="group flex items-center gap-1 rounded-full border px-3 py-1.5 transition hover:bg-white hover:text-black sm:px-4 sm:py-2"
                             >
                                 <FaGithub className="h-5 w-5" />
                                 GitHub
