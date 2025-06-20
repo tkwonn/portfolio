@@ -1,13 +1,10 @@
 import { TranslationType } from '@/type';
 import base64 from '../../public/assets/img/base64.png';
-import clickEmpire from '../../public/assets/img/click-empire.png';
-import connect4 from '../../public/assets/img/connect4.png';
 import imgdock from '../../public/assets/img/imgdock.png';
 import ping from '../../public/assets/img/ping.png';
 import plantuml from '../../public/assets/img/plantuml.png';
 import portfolio from '../../public/assets/img/portfolio.png';
 import rpc from '../../public/assets/img/rpc.png';
-import sketch from '../../public/assets/img/sketch.png';
 import smallsh from '../../public/assets/img/smallsh.png';
 import snippet from '../../public/assets/img/snippet.png';
 import traceroute from '../../public/assets/img/traceroute.png';
@@ -416,95 +413,6 @@ export const en = {
                 },
             ],
         },
-        experience: {
-            header: {
-                intern: 'Internships Experience',
-                note: '※ Only internships with a duration of 1+ month are listed',
-            },
-            leftRows: {
-                position: 'Position',
-                arrangement: 'Work Arrangement',
-                technologies: 'Tech Stack',
-                period: 'Period',
-            },
-            bulletPoints: {
-                description: 'Description',
-                tasks: 'Assigned Tasks',
-                achievements: 'Key Achievements',
-            },
-            interns: [
-                {
-                    company: 'LoiLo Inc.',
-                    position: 'Backend Engineer Long-term Internship',
-                    arrangement: '20 to 35 hours per month',
-                    technologies: [
-                        'Languages: TypeScript, Go, Ruby',
-                        'Frameworks: React, Echo, Ruby on Rails',
-                        'Databases: MySQL, Redis',
-                        'Other: AWS, Docker, GitHub Actions',
-                        'Monitoring / BI: CloudWatch, Redash',
-                    ],
-                    period: '2024.6 - Present',
-                    description: `Participated in backend development for a large-scale educational platform (deployed in over 13,000 schools with 2.8 million DAU).`,
-                    tasks: [
-                        'Designed and implemented APIs (in Go)',
-                        'Implemented unit tests',
-                        'Migrated Lambda functions built with the Serverless Framework to AWS CDK',
-                        'Improved the UI of the management dashboard',
-                    ],
-                    achievements: [
-                        'Contributed to reducing server load by 30-40% on a system built with Ruby on Rails and ActiveRecord',
-                        'Achieved nearly 100% unit test coverage for newly implemented APIs',
-                        'Utilized CloudWatch Log Insights to investigate, validate, and categorize over 100 unclassified URLs in the web filter, improving filtering accuracy',
-                    ],
-                },
-                {
-                    company: 'Excite Japan Co., Ltd.',
-                    position: 'Backend Engineer Internship (1 month)',
-                    arrangement: '3 days per week, remote',
-                    technologies: [
-                        'Frontend: Vue.js, TypeScript',
-                        'Backend: Laravel',
-                        'Other: Docker, GitHub Actions, PHPUnit',
-                    ],
-                    period: 'October 1, 2024 - October 31, 2024',
-                    description:
-                        'Participated in a new development project for an internal cancellation management system of a security service provided by Excite. Responsible for end-to-end development from frontend to backend.',
-                    tasks: [
-                        'Experienced the entire development process from requirements definition to implementation',
-                        'Implemented frontend and backend',
-                        'Implemented unit tests',
-                        'Implemented validation logic based on complex business rules',
-                    ],
-                    achievements: [
-                        'Achieved operational efficiency through workload reduction while maintaining the human approval process by semi-automating the cancellation procedure',
-                        'The developed system was adopted in the production environment after the internship',
-                    ],
-                },
-                {
-                    company:
-                        'Center for Applied Systems and Software (CASS), Oregon State University',
-                    position: 'Backend Engineer Long-term Internship',
-                    arrangement: '15+ hours per week',
-                    technologies: [
-                        'Frontend: Vue.js',
-                        'Backend: C#',
-                        'Other: ActiveMQ',
-                    ],
-                    period: 'April 1, 2022 - September 30, 2024',
-                    description:
-                        'Participated in a development project for a statewide transportation management platform for the Oregon Department of Transportation (ODOT). Responsible for developing a messaging integration system between backend services and implementing the management dashboard.',
-                    tasks: [
-                        'Designed and implemented a messaging system using C# and ActiveMQ',
-                        'Implemented the management dashboard using Vue.js',
-                    ],
-                    achievements: [
-                        'Built a communication design between microservices',
-                        'Experienced the process from requirements definition to implementation in government system development',
-                    ],
-                },
-            ],
-        },
     },
     projects: {
         web: [
@@ -560,33 +468,6 @@ export const en = {
                 tags: ['Electron', 'TypeScript', 'React', 'Tailwind CSS'],
                 githubUrl: 'https://github.com/tkwonn/video-compressor',
                 appUrl: 'https://github.com/tkwonn/video-compressor/releases',
-            },
-            {
-                image: sketch,
-                title: 'Etch A Sketch',
-                description:
-                    'A drawing app inspired by the classic Etch A Sketch toy. Uses Konva.js for canvas drawing and supports line style customization. User sketches are stored in Cloudinary while user profiles and drawing metadata are persisted in PostgreSQL. Backend uses Django REST API with JWT authentication.',
-                tags: ['Vue.js', 'Django', 'PostgreSQL'],
-                githubUrl: 'https://github.com/Recursion-Group-K/sketch',
-                appUrl: 'https://sketch-frontend-d11d98fe289b.herokuapp.com/',
-            },
-            {
-                image: connect4,
-                title: 'Connect 4',
-                description:
-                    'A turn-based game where two players compete to align four balls vertically, horizontally, or diagonally. Implements an AI opponent using Monte Carlo Tree Search algorithm and manages state with React Context API.',
-                tags: ['HTML5', 'CSS3', 'React'],
-                githubUrl: 'https://github.com/TeamE-React/connect-4',
-                appUrl: 'https://teame-connect4.vercel.app/',
-            },
-            {
-                image: clickEmpire,
-                title: 'Clicker Empire Game',
-                description:
-                    'Cookie Clicker-inspired browser game using JavaScript and DOM manipulation. Key features include an interactive gameplay and local storage for saving progress.',
-                tags: ['HTML5', 'CSS3', 'JavaScript'],
-                githubUrl: 'https://github.com/tkwonn/clicker-empire-game',
-                appUrl: 'https://clicker-empire-game-five.vercel.app/',
             },
         ],
         cli: [

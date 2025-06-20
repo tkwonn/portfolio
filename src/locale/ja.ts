@@ -1,13 +1,10 @@
 import { TranslationType } from '@/type';
 import base64 from '../../public/assets/img/base64.png';
-import clickEmpire from '../../public/assets/img/click-empire.png';
-import connect4 from '../../public/assets/img/connect4.png';
 import imgdock from '../../public/assets/img/imgdock.png';
 import ping from '../../public/assets/img/ping.png';
 import plantuml from '../../public/assets/img/plantuml.png';
 import portfolio from '../../public/assets/img/portfolio.png';
 import rpc from '../../public/assets/img/rpc.png';
-import sketch from '../../public/assets/img/sketch.png';
 import smallsh from '../../public/assets/img/smallsh.png';
 import snippet from '../../public/assets/img/snippet.png';
 import traceroute from '../../public/assets/img/traceroute.png';
@@ -424,97 +421,6 @@ export const ja = {
                 },
             ],
         },
-        experience: {
-            header: {
-                intern: 'インターンシップ経験',
-                note: '※ 1ヶ月以上のインターンシップ経験のみを抜粋',
-            },
-            leftRows: {
-                position: '職種',
-                arrangement: '勤務形態',
-                technologies: '技術スタック',
-                period: '期間',
-            },
-            bulletPoints: {
-                description: '概要',
-                tasks: '担当した業務',
-                achievements: '具体的な成果',
-            },
-            interns: [
-                {
-                    company: 'ロイロ株式会社',
-                    position: 'バックエンドエンジニア長期インターン',
-                    arrangement: '月20 ~ 35時間',
-                    technologies: [
-                        '言語: TypeScript, Go, Ruby',
-                        'フレームワーク: React, Echo, Ruby on Rails',
-                        'データベース: MySQL, Redis',
-                        'その他: AWS, Docker, GitHub Actions',
-                        '監視 / BI: CloudWatch, Redash',
-                    ],
-                    period: '2024年6月 ~ 現在',
-                    description:
-                        '大規模教育プラットフォーム（導入校13,000校以上、DAU 280万人）のバックエンド開発に参画。',
-                    tasks: [
-                        'APIの設計・実装（Go言語）',
-                        '単体テストの実装',
-                        'Serverlessフレームワークで構築されたLambda関数群のAWS CDKへの移行',
-                        '管理画面のUI改善',
-                    ],
-                    achievements: [
-                        'Ruby on Rails + ActiveRecordで構築されたサーバ負荷を30-40%削減することに貢献',
-                        '新規実装APIにおいて、100%に近い水準のユニットテストカバレッジを実現',
-                        'CloudWatch Log Insightsを活用し、Webフィルタの未分類URLを100件以上調査・検証・分類することでフィルタリング精度を向上',
-                        '多言語対応ページの英訳を精査し、より適切な表現を社内に提案',
-                    ],
-                },
-                {
-                    company: 'エキサイト株式会社',
-                    position: 'バックエンドエンジニアインターン（1ヶ月）',
-                    arrangement: '週3日リモート',
-                    technologies: [
-                        'フロントエンド: Vue.js, TypeScript',
-                        'バックエンド: Laravel',
-                        'その他: Docker, GitHub Actions, PHPUnit',
-                    ],
-                    period: '2024年10月1日 ~ 2024年10月31日',
-                    description:
-                        '社内向け解約管理システムの新規開発プロジェクトに参画。フロントエンドからバックエンドまでの一連の開発を担当。 ',
-                    tasks: [
-                        '要件定義から実装までの一連の開発プロセスを経験',
-                        'フロントエンド・バックエンドの実装',
-                        '単体テストの実装',
-                        '複雑なビジネスルールに基づくバリデーションロジックの実装',
-                    ],
-                    achievements: [
-                        '解約手続きの半自動化により、人的承認プロセスを維持しながら工数削減による業務効率化を実現',
-                        'インターン終了後、開発したシステムが本番環境で採用',
-                    ],
-                },
-                {
-                    company:
-                        'オレゴン州立大学　応用システム・ソフトウェアセンター（CASS）',
-                    position: 'バックエンドエンジニア長期インターン',
-                    arrangement: '週15時間以上',
-                    technologies: [
-                        'フロントエンド: Vue.js',
-                        'バックエンド: C#',
-                        'その他: ActiveMQ',
-                    ],
-                    period: '2022年4月1日 ~ 2024年9月30日',
-                    description:
-                        'オレゴン州交通局（ODOT）の州全域交通管理プラットフォームの開発プロジェクトに参画。バックエンドサービス間のメッセージング統合システムの開発および管理画面の実装を担当。',
-                    tasks: [
-                        'C#とActiveMQを用いたメッセージングシステムの設計・実装',
-                        'Vue.jsを使用した管理画面の実装',
-                    ],
-                    achievements: [
-                        'マイクロサービス間の通信設計を構築',
-                        '行政システム開発における要件定義から実装までのプロセスを経験',
-                    ],
-                },
-            ],
-        },
     },
     projects: {
         web: [
@@ -570,33 +476,6 @@ export const ja = {
                 tags: ['Electron', 'TypeScript', 'React', 'Tailwind CSS'],
                 githubUrl: 'https://github.com/tkwonn/video-compressor',
                 appUrl: 'https://github.com/tkwonn/video-compressor/releases',
-            },
-            {
-                image: sketch,
-                title: 'Etch A Sketch',
-                description:
-                    'お絵描きツール「Etch A Sketch」に着想を得た描画アプリ。Konva.jsを使用してキャンバス上での描画が可能で、線の表現（太さや色など）を自由に調整できます。。ユーザーのスケッチはCloudinaryに保存され、プロフィールや描画メタデータはPostgreSQLで管理。バックエンドはDjango REST APIとJWT認証を採用しています。',
-                tags: ['Vue.js', 'Django', 'PostgreSQL'],
-                githubUrl: 'https://github.com/Recursion-Group-K/sketch',
-                appUrl: 'https://sketch-frontend-d11d98fe289b.herokuapp.com/',
-            },
-            {
-                image: connect4,
-                title: 'Connect 4',
-                description:
-                    '2人のプレイヤーが交互に操作し、縦・横・斜めに4つのボールを揃えるターン制ゲーム。Monte Carlo Tree SearchアルゴリズムによるAI対戦機能を実装し、React Context APIで状態管理を行っています。',
-                tags: ['HTML5', 'CSS3', 'React'],
-                githubUrl: 'https://github.com/TeamE-React/connect-4',
-                appUrl: 'https://teame-connect4.vercel.app/',
-            },
-            {
-                image: clickEmpire,
-                title: 'Clicker Empire Game',
-                description:
-                    'Cookie Clickerに着想を得たブラウザゲーム。JavaScriptとDOM操作を用いてインタラクティブなゲームプレイを実現し、進捗保存にはローカルストレージを利用しています。',
-                tags: ['HTML5', 'CSS3', 'JavaScript'],
-                githubUrl: 'https://github.com/tkwonn/clicker-empire-game',
-                appUrl: 'https://clicker-empire-game-five.vercel.app/',
             },
         ],
         cli: [

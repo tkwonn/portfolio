@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FiExternalLink } from 'react-icons/fi';
 import Education from '@/components/Education';
-import Experience from '@/components/Experience';
 import { useTranslations } from '@/hooks/useTranslations';
 
 export default function ResumeTemplate() {
@@ -36,7 +35,6 @@ export default function ResumeTemplate() {
 
             <section className="mx-auto mt-8 w-full max-w-[76rem]">
                 <Education />
-                <Experience />
             </section>
         </main>
     );

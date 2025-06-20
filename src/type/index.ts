@@ -81,24 +81,6 @@ export interface TranslationType {
             header: string;
             rows: Education[];
         };
-        experience: {
-            header: {
-                intern: string;
-                note: string;
-            };
-            leftRows: {
-                position: string;
-                arrangement: string;
-                technologies: string;
-                period: string;
-            };
-            bulletPoints: {
-                description: string;
-                tasks: string;
-                achievements: string;
-            };
-            interns: Work[];
-        };
     };
     projects: {
         web: Project[];
